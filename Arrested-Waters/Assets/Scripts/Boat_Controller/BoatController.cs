@@ -8,6 +8,7 @@ public class BoatController : MonoBehaviour
         {
             return boat.velocity.magnitude * 18f / 5f;
         } }
+    public float speedScalar;
     public float brakePower;
     public float anchorPower;
     public float steerSpeedMouse;
@@ -51,6 +52,7 @@ public class BoatController : MonoBehaviour
     public Axle rearAxle;
     public Engine engine;
     public GameObject cg;
+    public GameObject sail;
 
     //controls
     public Input_Controller InputController;
@@ -300,7 +302,7 @@ public class BoatController : MonoBehaviour
         }
 
         // Car will drift away at low speeds
-        if (boat.velocity.magnitude < 0.5f && activeThrottle == 0)
+        if (boat.velocity.magnitude < 0.1f && activeThrottle == 0)
         {
             localAccel = Vector2.zero;
             vel = Vector2.zero;
@@ -312,11 +314,12 @@ public class BoatController : MonoBehaviour
 
         //update car
         headAngle += angularVel * Time.fixedDeltaTime;
-        boat.velocity = vel;
+        boat.velocity = vel * speedScalar;
 
         boat.MoveRotation(Mathf.Rad2Deg * headAngle - 90);
         frontAxle.leftTire.transform.localRotation = Quaternion.Euler(0, 0, steerAngle * Mathf.Rad2Deg);
         frontAxle.rightTire.transform.localRotation = Quaternion.Euler(0, 0, steerAngle * Mathf.Rad2Deg);
+        sail.transform.localRotation = Quaternion.Euler(0, 0, steerAngle * Mathf.Rad2Deg + 30);
     }
 
     float SmoothSteering(float steerInput)
