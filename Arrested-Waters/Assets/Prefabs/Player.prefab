@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358094444987036011}
   - component: {fileID: 7763601271653441968}
+  - component: {fileID: 2623222806366198667}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -24,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3771867630119062228}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.913, y: 0.246, z: 0}
-  m_LocalScale: {x: 0.25686, y: 0.25686, z: 0.25686}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: -0.000000059604645}
+  m_LocalPosition: {x: -0.615, y: -0.369, z: 0}
+  m_LocalScale: {x: 0.83784616, y: 1.208432, z: 0.92071}
   m_Children: []
   m_Father: {fileID: 7414671063099183790}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &7763601271653441968
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -70,18 +71,32 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f0c6a2f2c4839704cbb2cfff8b4765c3, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4e166474beddfe243a41eb2c1dffd73a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 11.64, y: 2.31}
+  m_Size: {x: 5, y: 2.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2623222806366198667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3771867630119062228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceaca939d8869ab438a4c9395cdf1ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  ammo: 4
 --- !u!1 &7414671063099183788
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +194,7 @@ GameObject:
   - component: {fileID: 7414671064725437096}
   - component: {fileID: 7414671064725437099}
   m_Layer: 0
-  m_Name: survivor-idle_shotgun_0
+  m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,13 +207,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7414671064725437097}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.566, y: -0.121, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071066, w: 0.707107}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.72586, y: 0.72586, z: 0.72586}
   m_Children: []
   m_Father: {fileID: 7414671063099183790}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &7414671064725437099
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -238,13 +253,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6a96ecf0256ebd0489701c50831dc33d, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 6b71b7be536749c47967036c438b9890, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.13, y: 2.07}
+  m_Size: {x: 3.03, y: 2.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
