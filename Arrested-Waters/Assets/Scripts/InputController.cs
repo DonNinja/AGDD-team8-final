@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Input_Controller : MonoBehaviour
+public class InputController : MonoBehaviour
 {
-    public Car car;
+    public BoatController boat;
 
     public Button button_keyThrottle;
     public Button button_keyBrake;
@@ -189,7 +189,7 @@ public class Input_Controller : MonoBehaviour
         }
         else
         {
-            car.updateControls();
+            boat.updateControls();
         }
     }
 
