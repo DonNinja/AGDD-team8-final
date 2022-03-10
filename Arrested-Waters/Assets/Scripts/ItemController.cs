@@ -8,6 +8,7 @@ public class ItemController : MonoBehaviour {
     public enum Material { Wood, Metal, Gems };
 
     public Material mat_type;
+    bool is_picked_up = false;
 
     // Start is called before the first frame update
     void Start() {
@@ -20,8 +21,11 @@ public class ItemController : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        inv_cont.IncreaseInventory(mat_type);
-        Destroy(gameObject);
-        Destroy(this);
+        if (collision.name == "Player" && !is_picked_up) {
+            is_picked_up = true;
+            inv_cont.IncreaseInventory(mat_type);
+            Destroy(gameObject);
+            Destroy(this);
+        }
     }
 }
