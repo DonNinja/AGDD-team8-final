@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemController : MonoBehaviour {
     public InventoryController inv_cont;
 
-    public enum Material { Wood, Iron, Coal };
+    public enum Material { Wood, Metal, Gems };
 
     public Material mat_type;
 
@@ -24,10 +24,4 @@ public class ItemController : MonoBehaviour {
         Destroy(gameObject);
         Destroy(this);
     }
-
-    //private void OnTriggerEnter2D(Collision2D collision) {
-    //    inv_cont.IncreaseInventory(mat_type);
-    //    Destroy(gameObject);
-    //    Destroy(this);
-    //}
 }
