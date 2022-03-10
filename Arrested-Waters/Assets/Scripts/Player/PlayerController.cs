@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Animator animator;
     private SpriteRenderer sprite;
-    private Animator clone;
+    private bool isAiming;
+    public GameObject gun;
+
 
     private void Start()
     {
@@ -25,13 +27,24 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal");
         // Get y-value of movement. Works with arrow keys and WASD.
         movement.y = Input.GetAxis("Vertical");
+        isAiming = Input.GetMouseButton(1);
     }
 
     void FixedUpdate()
     {
         //if (!GameManager.instance.isDead)
         //{
-        rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+        if (!isAiming)
+        {
+            rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+            PutGunDown();
+        }
+
+        else
+        {
+            rb.MovePosition(rb.position + movement.normalized * moveSpeed / 2 * Time.fixedDeltaTime);
+            AimGun();
+        }
         // Set values for the animation.
         //animator.SetFloat("Horizontal", movement.x);
         //animator.SetFloat("Speed", movement.sqrMagnitude);
@@ -47,5 +60,14 @@ public class PlayerController : MonoBehaviour
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
     {
         return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
+    }
+
+    private void AimGun()
+    {
+        gun.SetActive(true);
+    }
+    private void PutGunDown()
+    {
+        gun.SetActive(false);
     }
 }
