@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private SpriteRenderer sprite;
     private Animator clone;
+    private bool isAiming;
 
     private void Start()
     {

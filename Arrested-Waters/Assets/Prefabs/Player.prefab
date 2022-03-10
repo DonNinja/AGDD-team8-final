@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: bee78ff4045c63c40873c67e2273f99f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0c6a2f2c4839704cbb2cfff8b4765c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 7414671063099183790}
   - component: {fileID: 7414671063099183791}
   - component: {fileID: 7414671063099183785}
+  - component: {fileID: 4286413223371140379}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -150,6 +151,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &4286413223371140379
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414671063099183788}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.65
 --- !u!1 &7414671064725437097
 GameObject:
   m_ObjectHideFlags: 0
