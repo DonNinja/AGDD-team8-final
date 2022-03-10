@@ -2,31 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Car : MonoBehaviour
+public class BoatController : MonoBehaviour
 {
     public float speedKPH { get
         {
-            return car.velocity.magnitude * 18f / 5f;
+            return boat.velocity.magnitude * 18f / 5f;
         } }
+    public float speedScalar;
     public float brakePower;
-    public float eBrakePower;
+    public float anchorPower;
     public float steerSpeedMouse;
     public float steerSpeedKey;
     public float steerAdjustSpeed;
     public float maxSteeringAngle;
-    public float frontGrip;
-    public float rearGrip;
-    public float wheelbase;
+    public float boatWidth;
     public float weightTransfer;
     public float cgHeight;
-    public float rollingResist;
+    public float waterResist;
     public float airResist;
     public float eBrakeGripRatioFront;
     public float eBrakeGripRatioRear;
-    public float cornerStiffFront;
-    public float cornerStiffRear;
     public float speedSteerCorrection;
     public float speedTurningStability;
+    public float lowSpeedWiggleCorr;
 
     public float cgCorr = 20;
     public float axleCorr = 2;
@@ -39,20 +37,25 @@ public class Car : MonoBehaviour
     private float angularVel;
     private float trackWidth;
     private float steerFilter;
+    private float frontGrip = 2.5f;
+    private float rearGrip = 2.5f;
+    private float cornerStiffFront = 5.0f;
+    private float cornerStiffRear = 5.2f;
 
     private Vector2 vel;
     private Vector2 accel;
     private Vector2 localVel;
     private Vector2 localAccel;
 
-    public Rigidbody2D car;
+    public Rigidbody2D boat;
     public Axle frontAxle;
     public Axle rearAxle;
     public Engine engine;
     public GameObject cg;
+    public GameObject sail;
 
     //controls
-    public Input_Controller InputController;
+    public InputController InputController;
 
     private KeyCode key_throttle = KeyCode.W;
     private KeyCode key_brake = KeyCode.S;
@@ -83,25 +86,25 @@ public class Car : MonoBehaviour
 
     void Start()
     {
-        car = GetComponent<Rigidbody2D>();
+        boat = GetComponent<Rigidbody2D>();
         //frontAxle = GetComponent<Axle>();
         //rearAxle = GetComponent<Axle>();
         //engine = GetComponent<Engine>();
         //cg = GetComponent<GameObject>();
 
-        car.inertia = 855;    
+        boat.inertia = 855;    
 
         vel = Vector2.zero;
         frontAxle.cgDist = Vector2.Distance(cg.transform.position, frontAxle.axle.transform.position) * axleCorr;
         rearAxle.cgDist = Vector2.Distance(cg.transform.position, rearAxle.axle.transform.position) * axleCorr;
-        wheelbase = frontAxle.cgDist + rearAxle.cgDist;
+        boatWidth = frontAxle.cgDist + rearAxle.cgDist;
 
-        frontAxle.Init(car.mass, wheelbase, frontGrip);
-        rearAxle.Init(car.mass, wheelbase, rearGrip);
+        frontAxle.Init(boat.mass, boatWidth, frontGrip);
+        rearAxle.Init(boat.mass, boatWidth, rearGrip);
         trackWidth = Vector2.Distance(frontAxle.leftTire.transform.position, frontAxle.rightTire.transform.position);
 
         // Automatic transmission
-        engine.UpdateAutomaticTransmission(car);
+        engine.UpdateAutomaticTransmission(boat);
     }
 
     //handle input update
@@ -158,8 +161,8 @@ public class Car : MonoBehaviour
     //handle physics update
     void FixedUpdate()
     {
-        vel = car.velocity;
-        headAngle = (car.rotation + 90) * Mathf.Deg2Rad;
+        vel = boat.velocity;
+        headAngle = (boat.rotation + 90) * Mathf.Deg2Rad;
 
         float sn = Mathf.Sin(headAngle);
         float cs = Mathf.Cos(headAngle);
@@ -168,12 +171,12 @@ public class Car : MonoBehaviour
         localVel.y = cs * vel.y - sn * vel.x;
 
         //weight transfer
-        float transferX = weightTransfer * localAccel.x * cgHeight / wheelbase;
+        float transferX = weightTransfer * localAccel.x * cgHeight / boatWidth;
         float transferY = weightTransfer * localAccel.y * cgHeight / trackWidth * cgCorr;
 
         //weight per axle
-        float weightFront = car.mass * (frontAxle.weightRatio * -Physics2D.gravity.y - transferX);
-        float weightRear = car.mass * (frontAxle.weightRatio * -Physics2D.gravity.y + transferX);
+        float weightFront = boat.mass * (frontAxle.weightRatio * -Physics2D.gravity.y - transferX);
+        float weightRear = boat.mass * (frontAxle.weightRatio * -Physics2D.gravity.y + transferX);
 
         //weight per tire
         frontAxle.leftTire.activeWeight = weightFront - transferY;
@@ -223,7 +226,7 @@ public class Car : MonoBehaviour
         rearAxle.slipAngle = Mathf.Atan2(localVel.y + rearAxle.angularVel, Mathf.Abs(localVel.x));
 
         //throttle/brake
-        float activeThrottle = (throttle * engine.GetTorque(car)) * (engine.GearRatio * engine.EffectiveGearRatio);
+        float activeThrottle = (throttle * engine.GetTorque(boat)) * (engine.GearRatio * engine.EffectiveGearRatio);
 
         //torque per tire (rwd)
         rearAxle.leftTire.torque = activeThrottle / rearAxle.leftTire.radius;
@@ -235,17 +238,27 @@ public class Car : MonoBehaviour
         rearAxle.leftTire.grip = rearGrip * (1.0f - eBrake * (1.0f - eBrakeGripRatioRear));
         rearAxle.rightTire.grip = rearGrip * (1.0f - eBrake * (1.0f - eBrakeGripRatioRear));
 
-        frontAxle.leftTire.friction = Mathf.Clamp(-cornerStiffFront * frontAxle.slipAngle, -frontAxle.leftTire.grip, frontAxle.leftTire.grip) * frontAxle.leftTire.activeWeight;
-        frontAxle.rightTire.friction = Mathf.Clamp(-cornerStiffFront * frontAxle.slipAngle, -frontAxle.rightTire.grip, frontAxle.rightTire.grip) * frontAxle.rightTire.activeWeight;
-        rearAxle.leftTire.friction = Mathf.Clamp(-cornerStiffRear * rearAxle.slipAngle, -rearAxle.leftTire.grip, rearAxle.leftTire.grip) * rearAxle.leftTire.activeWeight;
-        rearAxle.rightTire.friction = Mathf.Clamp(-cornerStiffRear * rearAxle.slipAngle, -rearAxle.rightTire.grip, rearAxle.rightTire.grip) * rearAxle.rightTire.activeWeight;
+        if(speedKPH > lowSpeedWiggleCorr)
+        {
+            frontAxle.leftTire.friction = Mathf.Clamp(-cornerStiffFront * frontAxle.slipAngle, -frontAxle.leftTire.grip, frontAxle.leftTire.grip) * frontAxle.leftTire.activeWeight;
+            frontAxle.rightTire.friction = Mathf.Clamp(-cornerStiffFront * frontAxle.slipAngle, -frontAxle.rightTire.grip, frontAxle.rightTire.grip) * frontAxle.rightTire.activeWeight;
+            rearAxle.leftTire.friction = Mathf.Clamp(-cornerStiffRear * rearAxle.slipAngle, -rearAxle.leftTire.grip, rearAxle.leftTire.grip) * rearAxle.leftTire.activeWeight;
+            rearAxle.rightTire.friction = Mathf.Clamp(-cornerStiffRear * rearAxle.slipAngle, -rearAxle.rightTire.grip, rearAxle.rightTire.grip) * rearAxle.rightTire.activeWeight;
+        }
+        else
+        {
+            frontAxle.leftTire.friction = Mathf.Clamp(-cornerStiffFront * frontAxle.slipAngle, -frontAxle.leftTire.grip, frontAxle.leftTire.grip) * frontAxle.leftTire.activeWeight * 0.1f;
+            frontAxle.rightTire.friction = Mathf.Clamp(-cornerStiffFront * frontAxle.slipAngle, -frontAxle.rightTire.grip, frontAxle.rightTire.grip) * frontAxle.rightTire.activeWeight * 0.1f;
+            rearAxle.leftTire.friction = Mathf.Clamp(-cornerStiffRear * rearAxle.slipAngle, -rearAxle.leftTire.grip, rearAxle.leftTire.grip) * rearAxle.leftTire.activeWeight * 0.1f;
+            rearAxle.rightTire.friction = Mathf.Clamp(-cornerStiffRear * rearAxle.slipAngle, -rearAxle.rightTire.grip, rearAxle.rightTire.grip) * rearAxle.rightTire.activeWeight * 0.1f;
+        }
 
         //sum forces
         float tractionX = rearAxle.torque;
         float tractionY = 0;
 
-        float dragForceX = -rollingResist * localVel.x - airResist * localVel.x * Mathf.Abs(localVel.x);
-        float dragForceY = -rollingResist * localVel.y - airResist * localVel.y * Mathf.Abs(localVel.y);
+        float dragForceX = -waterResist * localVel.x - airResist * localVel.x * Mathf.Abs(localVel.x);
+        float dragForceY = -waterResist * localVel.y - airResist * localVel.y * Mathf.Abs(localVel.y);
 
         float totalForceX = dragForceX + tractionX;
         float totalForceY = dragForceY + tractionY + Mathf.Cos(steerAngle) * frontAxle.friction + rearAxle.friction;
@@ -257,14 +270,14 @@ public class Car : MonoBehaviour
         }
 
         //adjust Y force so it levels out the car heading at high speeds
-        if (car.velocity.magnitude > 10)
+        if (boat.velocity.magnitude > 10)
         {
-            totalForceY *= (car.velocity.magnitude + 1) / (21f - speedTurningStability);
+            totalForceY *= (boat.velocity.magnitude + 1) / (21f - speedTurningStability);
         }
 
         //acceleration
-        localAccel.x = totalForceX / car.mass;
-        localAccel.y = totalForceY / car.mass;
+        localAccel.x = totalForceX / boat.mass;
+        localAccel.y = totalForceY / boat.mass;
 
         accel.x = cs * localAccel.x - sn * localAccel.y;
         accel.y = sn * localAccel.x + cs * localAccel.y;
@@ -275,7 +288,7 @@ public class Car : MonoBehaviour
 
         //angular torque/accel
         float angularTorque = (frontAxle.friction * frontAxle.cgDist) - (rearAxle.friction * rearAxle.cgDist);
-        var angularAccel = angularTorque / car.inertia;
+        var angularAccel = angularTorque / boat.inertia;
         angularVel += angularAccel * Time.fixedDeltaTime;
 
         // Simulation likes to calculate high angular velocity at very low speeds - adjust for this
@@ -289,23 +302,24 @@ public class Car : MonoBehaviour
         }
 
         // Car will drift away at low speeds
-        if (car.velocity.magnitude < 0.5f && activeThrottle == 0)
+        if (boat.velocity.magnitude < 0.1f && activeThrottle == 0)
         {
             localAccel = Vector2.zero;
             vel = Vector2.zero;
             angularTorque = 0;
             angularVel = 0;
             accel = Vector2.zero;
-            car.angularVelocity = 0;
+            boat.angularVelocity = 0;
         }
 
         //update car
         headAngle += angularVel * Time.fixedDeltaTime;
-        car.velocity = vel;
+        boat.velocity = vel * speedScalar;
 
-        car.MoveRotation(Mathf.Rad2Deg * headAngle - 90);
+        boat.MoveRotation(Mathf.Rad2Deg * headAngle - 90);
         frontAxle.leftTire.transform.localRotation = Quaternion.Euler(0, 0, steerAngle * Mathf.Rad2Deg);
         frontAxle.rightTire.transform.localRotation = Quaternion.Euler(0, 0, steerAngle * Mathf.Rad2Deg);
+        sail.transform.localRotation = Quaternion.Euler(0, 0, steerAngle * Mathf.Rad2Deg + 30);
     }
 
     float SmoothSteering(float steerInput)
@@ -341,8 +355,8 @@ public class Car : MonoBehaviour
 
     float SpeedAdjustedSteering(float steerInput)
     {
-        float activeVelocity = Mathf.Min(car.velocity.magnitude, 250.0f);
-        float steer = steerInput * (1.0f - (car.velocity.magnitude / speedSteerCorrection));
+        float activeVelocity = Mathf.Min(boat.velocity.magnitude, 250.0f);
+        float steer = steerInput * (1.0f - (boat.velocity.magnitude / speedSteerCorrection));
         return steer;
     }
 
@@ -352,7 +366,7 @@ public class Car : MonoBehaviour
         if (debug)
         {
             GUI.Label(new Rect(5, 5, 300, 20), "Speed: " + speedKPH.ToString());
-            GUI.Label(new Rect(5, 25, 300, 20), "RPM: " + engine.GetRPM(car).ToString());
+            GUI.Label(new Rect(5, 25, 300, 20), "RPM: " + engine.GetRPM(boat).ToString());
             GUI.Label(new Rect(5, 45, 300, 20), "Gear: " + (engine.CurrentGear + 1).ToString());
             GUI.Label(new Rect(5, 65, 300, 20), "LocalAcceleration: " + localAccel.ToString());
             GUI.Label(new Rect(5, 85, 300, 20), "Acceleration: " + accel.ToString());
