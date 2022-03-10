@@ -29,8 +29,6 @@ public class ItemController : MonoBehaviour {
 
             float dist = Vector2.Distance(other.transform.position, gameObject.transform.position);
 
-            Debug.Log(dist);
-
             gameObject.transform.position += dir_vec * (trigger_rad - dist) * Time.deltaTime;
         }
     }
