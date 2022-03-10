@@ -55,7 +55,7 @@ public class BoatController : MonoBehaviour
     public GameObject sail;
 
     //controls
-    public Input_Controller InputController;
+    public InputController InputController;
 
     private KeyCode key_throttle = KeyCode.W;
     private KeyCode key_brake = KeyCode.S;

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Input_Controller : MonoBehaviour
+public class InputController : MonoBehaviour
 {
     public BoatController boat;
 
