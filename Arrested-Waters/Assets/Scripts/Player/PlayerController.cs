@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sprite;
     private bool isAiming;
     public GameObject gun;
+    public GameObject axe;
 
 
     private void Start()
