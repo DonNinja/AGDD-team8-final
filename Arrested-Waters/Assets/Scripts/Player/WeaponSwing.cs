@@ -9,6 +9,6 @@ public class WeaponSwing : MonoBehaviour
 
     public void SpawnEffect()
     {
-        Instantiate(weaponSwingFX, spawnLocation.position, spawnLocation.rotation);
+        GameObject particle = Instantiate(weaponSwingFX, spawnLocation.position, spawnLocation.parent.rotation);
     }
 }
