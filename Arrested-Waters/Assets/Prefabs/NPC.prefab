@@ -95,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_dialogue:
-  - main 1
+  - Hello, human. My name is whatever you want to call me.
   - main 2
   - main 3
   repeating_dialogue:
@@ -132,6 +132,7 @@ MonoBehaviour:
   - repeat 2
   dialogue_text: {fileID: 1432117320221118055}
   interaction_box: {fileID: 1432117320219677711}
+  letter_interval: 0.025
 --- !u!1 &1432117319731452111
 GameObject:
   m_ObjectHideFlags: 0

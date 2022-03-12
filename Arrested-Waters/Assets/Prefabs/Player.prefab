@@ -58,7 +58,7 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -0.64953625, y: 0.7236073}
       - {x: -1.8, y: 1.0880479}
-      - {x: -2.168595, y: 0}
+      - {x: -2.418595, y: 0}
       - {x: -1.8, y: -1.088048}
       - {x: -0.6182955, y: -0.7236073}
 --- !u!1 &3771867630119062228
@@ -246,6 +246,7 @@ MonoBehaviour:
   moveSpeed: 5
   gun: {fileID: 3771867630119062228}
   axe: {fileID: 0}
+  interaction_collider: {fileID: 1109304067126158368}
 --- !u!1 &7414671064725437097
 GameObject:
   m_ObjectHideFlags: 0

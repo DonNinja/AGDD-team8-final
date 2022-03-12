@@ -11,9 +11,14 @@ public class NPCController : MonoBehaviour {
 
     [SerializeField] TextMeshProUGUI dialogue_text;
     [SerializeField] GameObject interaction_box;
+    [SerializeField] float letter_interval;
 
+    float time_counter;
     int repeat_iterator = 0;
+    int letter_iterator = 0;
+    int next_string_length = 0;
     bool can_talk = false;
+    string next_text = "";
 
     private void Start() {
         dialogue_text.text = "";
@@ -32,8 +37,18 @@ public class NPCController : MonoBehaviour {
         }
     }
 
+    private void FixedUpdate() {
+        if (letter_iterator < next_string_length) {
+            time_counter += Time.deltaTime;
+            if (time_counter > letter_interval) {
+                dialogue_text.text += next_text[letter_iterator];
+                time_counter = 0;
+                letter_iterator++;
+            }
+        }
+    }
+
     void Talk() {
-        string next_text;
         if (main_dialogue.Count > 0) {
             next_text = main_dialogue[0];
             main_dialogue.RemoveAt(0);
@@ -46,7 +61,9 @@ public class NPCController : MonoBehaviour {
             repeat_iterator++;
         }
 
-        dialogue_text.text = next_text;
+        dialogue_text.text = "";
+        next_string_length = next_text.Length;
+        letter_iterator = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -58,6 +75,8 @@ public class NPCController : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.name == "InteractionCollider") {
             can_talk = false;
+            dialogue_text.text = "";
+            next_text = "";
         }
     }
 }

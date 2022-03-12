@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private bool isAiming;
     public GameObject gun;
     public GameObject axe;
+    public PolygonCollider2D interaction_collider;
 
 
     private void Start()
@@ -66,9 +67,11 @@ public class PlayerController : MonoBehaviour
     private void AimGun()
     {
         gun.SetActive(true);
+        interaction_collider.enabled = false;
     }
     private void PutGunDown()
     {
         gun.SetActive(false);
+        interaction_collider.enabled = true;
     }
 }
