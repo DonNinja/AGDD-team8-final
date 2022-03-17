@@ -10,8 +10,10 @@ public class EnemySight : MonoBehaviour
     public LayerMask IgnoreMask;
     public GameObject visionDirection;
     public float hearingDistance;
+    public float sightRadius;
 
     private bool inRange;
+    private float angle;
 
     public void Start()
     {
@@ -32,7 +34,8 @@ public class EnemySight : MonoBehaviour
             Debug.DrawRay(transform.position, watchingTarget.transform.position - transform.position, Color.green);
             if (hit)
             {
-                if (hit.collider.gameObject == watchingTarget)
+                angle = Vector2.Angle((watchingTarget.transform.position - transform.position), transform.forward);
+                if (hit.collider.gameObject == watchingTarget && angle <= sightRadius)
                 {
                     ai.SpottPlayer(watchingTarget);
                 }
