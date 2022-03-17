@@ -25,10 +25,23 @@ namespace Arrested_Waters {
 
         protected override void Interact()
         {
-            EnterBoatFunc();
+            if (onBoat)
+                EnterBoatFunc();
+            else
+                ExitBoatFunc();
         }
 
         public void EnterBoatFunc()
+        {
+            GameManager.instance.mainCamera.target = boat.transform;
+            GameManager.instance.mainCamera.GetComponent<Animator>().SetTrigger("zoomOut");
+            boat.enabled = true;
+            player.enabled = false;
+            player.transform.position = boat.playerSeat.transform.position;
+            onBoat = true;
+
+        }
+        public void ExitBoatFunc()
         {
             GameManager.instance.mainCamera.target = boat.transform;
             GameManager.instance.mainCamera.GetComponent<Animator>().SetTrigger("zoomOut");
