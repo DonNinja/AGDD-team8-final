@@ -7,16 +7,23 @@ public class Shoot : MonoBehaviour
 
     public float cooldown = 1;
     public float ammo = 4;
+    public GameObject shootFX;
+    private PlayerController player;
+    public Transform gunPoint;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        player = GameManager.instance.player;
+    }
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && player.isAiming)
             ShootNow();
     }
 
     void ShootNow()
     {
-        Debug.Log("Bang");
+        Instantiate(shootFX, gunPoint.transform.position, transform.rotation);
     }
 }
