@@ -3601,12 +3601,36 @@ PrefabInstance:
       value: Boat
       objectReference: {fileID: 0}
     - target: {fileID: 8980587839387731908, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.4056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980587839387731908, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.4056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980587839387731908, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.4056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980587839387731908, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.96
+      value: -5.108
       objectReference: {fileID: 0}
     - target: {fileID: 8980587839387731908, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.07
+      value: -0.71858
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980587839387731913, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980587839895678505, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980587839896597582, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
