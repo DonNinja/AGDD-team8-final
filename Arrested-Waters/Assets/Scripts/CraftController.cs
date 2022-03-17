@@ -6,17 +6,18 @@ using TMPro;
 namespace Arrested_Waters {
     public class CraftController : InteractableScript {
         [Header("Crafting")]
-        [SerializeField] int wood_req;
-        [SerializeField] int metal_req;
-        [SerializeField] int gem_req;
 
         [SerializeField] TextMeshProUGUI wood_txt;
         [SerializeField] TextMeshProUGUI metal_txt;
         [SerializeField] TextMeshProUGUI gem_txt;
         [SerializeField] GameObject requirements;
+        [SerializeField] GameObject boat_interaction_box;
 
         InventoryController inventoryController;
 
+        int wood_req;
+        int metal_req;
+        int gem_req;
         int stage = 0;
 
         bool has_entered;
@@ -59,10 +60,13 @@ namespace Arrested_Waters {
                 int available_wood = inventoryController.wood_amt;
                 int available_metal = inventoryController.metal_amt;
                 int available_gems = inventoryController.gem_amt;
+
                 if (available_wood >= wood_req && available_metal >= metal_req && available_gems >= gem_req) {
                     // TODO: Upgrade ship
                     switch (stage) {
                         case 0:
+
+
                             break;
 
                         default:
@@ -81,6 +85,13 @@ namespace Arrested_Waters {
                 }
 
                 requirements.SetActive(false);
+            }
+        }
+
+        protected override void OnTriggerEnter2D(Collider2D collision) {
+            base.OnTriggerEnter2D(collision);
+            if (boat_interaction_box.activeSelf) {
+                boat_interaction_box.SetActive(false);
             }
         }
 

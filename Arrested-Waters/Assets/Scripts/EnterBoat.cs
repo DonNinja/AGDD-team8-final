@@ -55,11 +55,12 @@ namespace Arrested_Waters {
             player.enabled = true;
             player.transform.position = boat.playerSeat.transform.position;
             onBoat = false;
-
         }
 
-        void OnTriggerExit2D(Collider2D col)
+
+        protected override void OnTriggerExit2D(Collider2D col)
         {
+            base.OnTriggerExit2D(col);
             player.onBoat = false;
             Debug.Log("Left Boat");
         }

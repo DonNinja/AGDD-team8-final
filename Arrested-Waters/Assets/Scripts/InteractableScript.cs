@@ -10,7 +10,7 @@ namespace Arrested_Waters {
 
         // Update is called once per frame
         protected virtual void Update() {
-            if (can_interact) {
+            if (interaction_box.activeSelf) {
                 if (Input.GetKeyDown(KeyCode.E)) {
                     Interact();
                 }
@@ -21,17 +21,15 @@ namespace Arrested_Waters {
             Debug.Log("Is interacting");
         }
 
-        private void OnTriggerEnter2D(Collider2D collision) {
+        protected virtual void OnTriggerEnter2D(Collider2D collision) {
             if (collision.name == "InteractionCollider") {
                 interaction_box.SetActive(true); // Show the interaction box
-                can_interact = true;
             }
         }
 
         protected virtual void OnTriggerExit2D(Collider2D collision) {
             if (collision.name == "InteractionCollider") {
                 interaction_box.SetActive(false); // Hide the interaction box
-                can_interact = false;
             }
         }
     }
