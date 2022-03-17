@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public bool isDead;
     public PlayerController player;
     public BoatController boat;
+    public CameraFollowTarget mainCamera;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
         }
         player = GameObject.Find("Player").GetComponent<PlayerController>();
         boat = GameObject.Find("Boat").GetComponent<BoatController>();
+        mainCamera = GameObject.Find("Main Camera").GetComponent<CameraFollowTarget>();
     }
 
 }

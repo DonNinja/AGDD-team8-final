@@ -53,6 +53,7 @@ public class BoatController : MonoBehaviour
     public Engine engine;
     public GameObject cg;
     public GameObject sail;
+    public GameObject playerSeat;
 
     //controls
     public InputController InputController;
