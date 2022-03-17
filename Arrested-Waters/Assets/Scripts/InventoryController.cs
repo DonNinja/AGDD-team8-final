@@ -23,9 +23,12 @@ public class InventoryController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        wood_text.text = wood_amt.ToString();
-        metal_text.text = metal_amt.ToString();
-        gem_text.text = gem_amt.ToString();
+        if (wood_text)
+            wood_text.text = wood_amt.ToString();
+        if (metal_text)
+            metal_text.text = metal_amt.ToString();
+        if (gem_text)
+            gem_text.text = gem_amt.ToString();
     }
 
     public void IncreaseInventory(ItemController.Material mat_type) {

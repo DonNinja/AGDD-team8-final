@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 8434766121629791673}
   m_Layer: 0
   m_Name: InteractBox-NoStroke
-  m_TagString: Untagged
+  m_TagString: InteractBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
