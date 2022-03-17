@@ -37,7 +37,6 @@ namespace Arrested_Waters {
         {
             Debug.Log("Enter");
             GameManager.instance.mainCamera.target = boat.transform;
-            GameManager.instance.mainCamera.GetComponent<Animator>().SetTrigger("zoomOut");
             boat.enabled = true;
             boatCamera.enabled = true;
             player.onBoat = true;
@@ -49,7 +48,6 @@ namespace Arrested_Waters {
         {
             Debug.Log("Exit");
             GameManager.instance.mainCamera.target = player.transform;
-            GameManager.instance.mainCamera.GetComponent<Animator>().SetTrigger("zoomOut");
             boat.enabled = false;
             boatCamera.enabled = false;
             player.enabled = true;
