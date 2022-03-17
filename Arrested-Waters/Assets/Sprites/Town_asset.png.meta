@@ -325,9 +325,9 @@ TextureImporter:
       name: Town_asset_6
       rect:
         serializedVersion: 2
-        x: 1126
+        x: 1127
         y: 687
-        width: 93
+        width: 92
         height: 532
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
