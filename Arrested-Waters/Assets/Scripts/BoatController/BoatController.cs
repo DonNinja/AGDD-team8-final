@@ -42,7 +42,7 @@ public class BoatController : MonoBehaviour
     private float cornerStiffFront = 5.0f;
     private float cornerStiffRear = 5.2f;
 
-    private Vector2 vel;
+    public Vector2 vel;
     private Vector2 accel;
     private Vector2 localVel;
     private Vector2 localAccel;

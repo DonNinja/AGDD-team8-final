@@ -7,7 +7,9 @@ namespace Arrested_Waters {
     {
         BoatController boat;
         PlayerController player;
-        bool onBoat;
+        public CameraController boatCamera;
+
+        bool onBoat = false;
 
         private void Start()
         {
@@ -25,7 +27,7 @@ namespace Arrested_Waters {
 
         protected override void Interact()
         {
-            if (onBoat)
+            if (!onBoat)
                 EnterBoatFunc();
             else
                 ExitBoatFunc();
@@ -33,24 +35,33 @@ namespace Arrested_Waters {
 
         public void EnterBoatFunc()
         {
+            Debug.Log("Enter");
             GameManager.instance.mainCamera.target = boat.transform;
             GameManager.instance.mainCamera.GetComponent<Animator>().SetTrigger("zoomOut");
             boat.enabled = true;
+            boatCamera.enabled = true;
+            player.onBoat = true;
             player.enabled = false;
             player.transform.position = boat.playerSeat.transform.position;
             onBoat = true;
-
         }
         public void ExitBoatFunc()
         {
-            GameManager.instance.mainCamera.target = boat.transform;
+            Debug.Log("Exit");
+            GameManager.instance.mainCamera.target = player.transform;
             GameManager.instance.mainCamera.GetComponent<Animator>().SetTrigger("zoomOut");
-            boat.enabled = true;
-            player.enabled = false;
+            boat.enabled = false;
+            boatCamera.enabled = false;
+            player.enabled = true;
             player.transform.position = boat.playerSeat.transform.position;
-            onBoat = true;
+            onBoat = false;
 
         }
 
+        void OnTriggerExit2D(Collider2D col)
+        {
+            player.onBoat = false;
+            Debug.Log("Left Boat");
+        }
     }
 }

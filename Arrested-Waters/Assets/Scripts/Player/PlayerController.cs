@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public BoatController boat;
+    public bool onBoat = false;
+
     public float moveSpeed;
     private Rigidbody2D rb;
     private Vector2 movement;
+    private Vector2 newMovement;
     private Animator animator;
     private SpriteRenderer sprite;
     private bool isAiming;
@@ -38,13 +42,19 @@ public class PlayerController : MonoBehaviour
         //{
         if (!isAiming)
         {
-            rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+            newMovement = rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime;
+            if (onBoat)
+                newMovement += new Vector2(boat.GetComponent<Rigidbody2D>().velocity.x, boat.GetComponent<Rigidbody2D>().velocity.y) * Time.fixedDeltaTime;
+            rb.MovePosition(newMovement);
             PutGunDown();
         }
 
         else
         {
-            rb.MovePosition(rb.position + movement.normalized * moveSpeed / 2 * Time.fixedDeltaTime);
+            newMovement = rb.position + movement.normalized * moveSpeed / 2 * Time.fixedDeltaTime;
+            if (onBoat)
+                newMovement += new Vector2(boat.transform.position.x, boat.transform.position.y);
+            rb.MovePosition(newMovement);
             AimGun();
         }
         // Set values for the animation.
