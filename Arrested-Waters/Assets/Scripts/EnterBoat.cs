@@ -24,6 +24,11 @@ namespace Arrested_Waters {
             {
                 player.transform.position = boat.playerSeat.transform.position;
             }
+
+            if(!onBoat && inBoat)
+            {
+                //do actual movement / attatchment
+            }
         }
 
         protected override void Interact()
@@ -44,6 +49,7 @@ namespace Arrested_Waters {
             player.enabled = false;
             player.transform.position = boat.playerSeat.transform.position;
             onBoat = true;
+            inBoat = true;
 
         }
         public void ExitBoatFunc()
@@ -57,6 +63,12 @@ namespace Arrested_Waters {
             player.transform.position = boat.playerSeat.transform.position;
             onBoat = false;
 
+        }
+
+        void OnTriggerExit2D(Collider2D col)
+        {
+            inBoat = false;
+            Debug.Log(inBoat);
         }
     }
 }

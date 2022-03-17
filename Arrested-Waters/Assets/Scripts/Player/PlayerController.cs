@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Vector2 newMovement;
     public float moveSpeed;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -38,13 +39,15 @@ public class PlayerController : MonoBehaviour
         //{
         if (!isAiming)
         {
-            rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+            newMovement = rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime;
+            rb.MovePosition(newMovement);
             PutGunDown();
         }
 
         else
         {
-            rb.MovePosition(rb.position + movement.normalized * moveSpeed / 2 * Time.fixedDeltaTime);
+            newMovement = rb.position + movement.normalized * moveSpeed / 2 * Time.fixedDeltaTime;
+            rb.MovePosition(newMovement);
             AimGun();
         }
         // Set values for the animation.
