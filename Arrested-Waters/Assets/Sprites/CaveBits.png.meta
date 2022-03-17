@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 17724177f99e6e34083b4bb771de31db
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 803437050537769171
+    second: CaveBits_0
+  - first:
+      213: -4394492562675017799
+    second: CaveBits_1
+  - first:
+      213: -5586266446750341718
+    second: CaveBits_2
+  - first:
+      213: 4003838926206330139
+    second: CaveBits_3
+  - first:
+      213: -35117476993159114
+    second: CaveBits_4
+  - first:
+      213: 501187363861213986
+    second: CaveBits_5
+  - first:
+      213: 2751782993557365365
+    second: CaveBits_6
+  - first:
+      213: 5042110089988462452
+    second: CaveBits_7
+  - first:
+      213: 150948747351688403
+    second: CaveBits_8
+  - first:
+      213: 4287298666433932986
+    second: CaveBits_9
+  - first:
+      213: 7350343685798180942
+    second: CaveBits_10
+  - first:
+      213: 6191406756659721625
+    second: CaveBits_11
+  - first:
+      213: 8710331316682943506
+    second: CaveBits_12
+  - first:
+      213: 1270928418863501594
+    second: CaveBits_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +83,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +117,327 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CaveBits_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2034
+        width: 1072
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8f0bc9db1662b00800000000000000
+      internalID: 803437050537769171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_1
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 2168
+        width: 251
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7d8a91c40a303c0800000000000000
+      internalID: -4394492562675017799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_2
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 2159
+        width: 317
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa523c493489972b0800000000000000
+      internalID: -5586266446750341718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_3
+      rect:
+        serializedVersion: 2
+        x: 2353
+        y: 2129
+        width: 670
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15e8664a4e709730800000000000000
+      internalID: 4003838926206330139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_4
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 2159
+        width: 472
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6303a6a37dc338ff0800000000000000
+      internalID: -35117476993159114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_5
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1483
+        width: 234
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223bcd4804394f600800000000000000
+      internalID: 501187363861213986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_6
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1280
+        width: 659
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572a2f59d0c403620800000000000000
+      internalID: 2751782993557365365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_7
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 1355
+        width: 857
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477dc20a96c29f540800000000000000
+      internalID: 5042110089988462452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_8
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 1420
+        width: 802
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d400310617481200800000000000000
+      internalID: 150948747351688403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_9
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 1217
+        width: 521
+        height: 785
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abeecca0c6b8f7b30800000000000000
+      internalID: 4287298666433932986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_10
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 194
+        width: 1227
+        height: 940
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48390173aaa10660800000000000000
+      internalID: 7350343685798180942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_11
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 790
+        width: 426
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995f7a644ab4ce550800000000000000
+      internalID: 6191406756659721625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_12
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 863
+        width: 310
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ce8d6ee2051e870800000000000000
+      internalID: 8710331316682943506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBits_13
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 104
+        width: 712
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11de4dc9ae33a110800000000000000
+      internalID: 1270928418863501594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
