@@ -4883,6 +4883,8 @@ GameObject:
   - component: {fileID: 4257474882896417085}
   - component: {fileID: 1308617760831829469}
   - component: {fileID: 1770690578918306416}
+  - component: {fileID: 7705842320320115440}
+  - component: {fileID: 2217447939101254174}
   m_Layer: 0
   m_Name: GunShoot 1
   m_TagString: Untagged
@@ -4988,7 +4990,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.6
+      scalar: 0.3
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -5041,8 +5043,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 100
-      minScalar: 50
+      scalar: 200
+      minScalar: 100
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -8722,7 +8724,7 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 2
     inside: 1
     outside: 0
@@ -9752,3 +9754,48 @@ MonoBehaviour:
   power: 100
   isEnemy: 0
   blood: {fileID: 7901248356177016559, guid: b80fdceef44d19b40adb375aa14e47f5, type: 3}
+--- !u!60 &7705842320320115440
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208756229646439691}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.04, y: 4.47}
+    newSize: {x: 5.04, y: 4.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 14.018619, y: -0.98176324}
+      - {x: 1.1556276, y: -0.4638693}
+      - {x: 0.25541878, y: -0.35105532}
+      - {x: -0.064364985, y: -0.037018344}
+      - {x: 0.2665047, y: 0.42688265}
+      - {x: 13.711597, y: 3.05162}
+--- !u!114 &2217447939101254174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208756229646439691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb8476932693344688dc201982e8df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0.3
+  justDisable: 0
