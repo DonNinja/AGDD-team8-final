@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 697840334738485052}
   - component: {fileID: 697840334738485051}
   m_Layer: 6
-  m_Name: InteractionCollider
+  m_Name: BoatTriggerCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
