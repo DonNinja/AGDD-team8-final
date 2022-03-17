@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 578000199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AxeEffectLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,6 +30,113 @@ Transform:
   m_Father: {fileID: 7414671063099183790}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &606074632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 606074633}
+  m_Layer: 7
+  m_Name: point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &606074633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606074632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.04, y: -0.046, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 358094444987036011}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &692932861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692932862}
+  - component: {fileID: 692932863}
+  - component: {fileID: 692932864}
+  m_Layer: 7
+  m_Name: HitBox
+  m_TagString: EnemyHitBox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &692932862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692932861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1736585408}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &692932863
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692932861}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.8911203, y: 0.46638733}
+      - {x: -0.62668204, y: 0.29430303}
+      - {x: -0.6343364, y: -0.34998855}
+      - {x: 1.4721237, y: -0.8218715}
+      - {x: 1.8836194, y: 0.013594091}
+--- !u!114 &692932864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692932861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88e7cfe4e60f1c4698057f92703aa27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 10
+  isEnemy: 0
+  blood: {fileID: 7901248356177016559, guid: b80fdceef44d19b40adb375aa14e47f5, type: 3}
 --- !u!1 &1736585407
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +150,7 @@ GameObject:
   - component: {fileID: 1736585411}
   - component: {fileID: 1736585410}
   - component: {fileID: 1736585409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +167,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.8523745, w: 0.52293193}
   m_LocalPosition: {x: -0.522, y: 0.848, z: 0}
   m_LocalScale: {x: 0.83784616, y: 1.208432, z: 0.92071}
-  m_Children: []
+  m_Children:
+  - {fileID: 692932862}
   m_Father: {fileID: 7414671063099183790}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 116.942}
@@ -129,6 +237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 1
   ammo: 4
+  shootFX: {fileID: 0}
+  gunPoint: {fileID: 0}
 --- !u!95 &1736585410
 Animator:
   serializedVersion: 3
@@ -172,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246198122214019228}
   - component: {fileID: 1109304067126158368}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InteractionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +344,7 @@ GameObject:
   - component: {fileID: 358094444987036011}
   - component: {fileID: 7763601271653441968}
   - component: {fileID: 2623222806366198667}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +361,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 1, w: -0.000000059604645}
   m_LocalPosition: {x: -0.615, y: -0.369, z: 0}
   m_LocalScale: {x: 0.83784616, y: 1.208432, z: 0.92071}
-  m_Children: []
+  m_Children:
+  - {fileID: 606074633}
   m_Father: {fileID: 7414671063099183790}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
@@ -320,6 +431,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 1
   ammo: 4
+  shootFX: {fileID: 3208756229646439691, guid: d9062f2c0e300a2458413d588483d319, type: 3}
+  gunPoint: {fileID: 606074633}
 --- !u!1 &7414671063099183788
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,9 +445,9 @@ GameObject:
   - component: {fileID: 7414671063099183785}
   - component: {fileID: 4286413223371140379}
   - component: {fileID: 7414671063099183791}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,9 +520,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f42260db8628564595e6e2a5a22c21b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boat: {fileID: 0}
+  onBoat: 0
   moveSpeed: 5
+  isAiming: 0
   gun: {fileID: 3771867630119062228}
-  axe: {fileID: 0}
+  axe: {fileID: 1736585407}
   interaction_collider: {fileID: 1109304067126158368}
 --- !u!1 &7414671064725437097
 GameObject:
@@ -421,7 +537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7414671064725437096}
   - component: {fileID: 7414671064725437099}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

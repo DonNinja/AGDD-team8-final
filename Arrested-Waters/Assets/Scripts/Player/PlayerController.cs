@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 newMovement;
     private Animator animator;
     private SpriteRenderer sprite;
-    private bool isAiming;
+    public bool isAiming;
     public GameObject gun;
     public GameObject axe;
     public PolygonCollider2D interaction_collider;

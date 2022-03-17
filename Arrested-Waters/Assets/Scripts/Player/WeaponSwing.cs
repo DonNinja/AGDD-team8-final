@@ -8,17 +8,19 @@ public class WeaponSwing : MonoBehaviour
     public Transform spawnLocation;
     private Animator anim;
     private GameObject hitBox;
+    private PlayerController player;
 
     public void Start()
     {
         anim = GetComponent<Animator>();
         hitBox = transform.GetChild(0).gameObject;
+        player = GameManager.instance.player;
     }
 
 
     public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !player.isAiming)
         {
             anim.SetTrigger("Attack");
         }
