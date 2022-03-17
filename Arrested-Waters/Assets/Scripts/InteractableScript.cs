@@ -9,7 +9,7 @@ namespace Arrested_Waters {
         [SerializeField] protected GameObject interaction_box;
 
         // Update is called once per frame
-        void Update() {
+        protected virtual void Update() {
             if (can_interact) {
                 if (Input.GetKeyDown(KeyCode.E)) {
                     Interact();

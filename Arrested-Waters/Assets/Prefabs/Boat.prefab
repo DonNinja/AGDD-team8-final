@@ -573,6 +573,7 @@ MonoBehaviour:
   engine: {fileID: 2260652958891514887}
   cg: {fileID: 2260652958637845482}
   sail: {fileID: 2260652957493313628}
+  playerSeat: {fileID: 0}
   InputController: {fileID: 0}
   debug: 1
 --- !u!1 &2260652958357697785

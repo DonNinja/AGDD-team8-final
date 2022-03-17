@@ -892,6 +892,57 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &8900364599759384524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8900364599759384514}
+  - component: {fileID: 8900364599759384525}
+  m_Layer: 0
+  m_Name: InventoryController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8900364599759384514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8900364599759384524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.176517, y: 1.9827731, z: 69.85358}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9065609006899098620}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8900364599759384525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8900364599759384524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88038e341b183d43bbd34255433e420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood_text: {fileID: 1894627810972980426}
+  metal_text: {fileID: 4387841121306105172}
+  gem_text: {fileID: 2876985196459494962}
+  add_text: {fileID: 6496886455989460778}
+  anim: {fileID: 3295152949377079247}
+  wood_amt: 0
+  metal_amt: 0
+  gem_amt: 0
 --- !u!1 &9065609006899098592
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +977,7 @@ RectTransform:
   - {fileID: 8756876998294322471}
   - {fileID: 2155637233856263020}
   - {fileID: 3562580961942842131}
+  - {fileID: 8900364599759384514}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
