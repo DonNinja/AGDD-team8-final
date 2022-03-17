@@ -42,8 +42,7 @@ namespace Arrested_Waters {
             player.onBoat = true;
             player.enabled = false;
             player.transform.position = boat.playerSeat.transform.position;
-            onBoat = true;
-        }
+            onBoat = true;        }
         public void ExitBoatFunc()
         {
             Debug.Log("Exit");
@@ -53,6 +52,7 @@ namespace Arrested_Waters {
             player.enabled = true;
             player.transform.position = boat.playerSeat.transform.position;
             onBoat = false;
+            GameManager.instance.mainCamera.GetComponent<Camera>().orthographicSize = 3;
         }
 
 

@@ -47,7 +47,7 @@ public class WeaponSwing : MonoBehaviour
         swing.transform.localScale = player.transform.localScale;
         swing.transform.GetChild(0).localScale = player.transform.localScale;
         swing.transform.rotation = Quaternion.Euler(swing.transform.rotation.x, swing.transform.rotation.y, swing.transform.rotation.z-180);
-        swing.transform.localScale = new Vector3(swing.transform.localScale.x * -1, swing.transform.localScale.y, swing.transform.localScale.z);
+        swing.transform.localScale = new Vector3(swing.transform.localScale.x, swing.transform.localScale.y*-1, swing.transform.localScale.z);
         swing.transform.GetChild(0).localScale = new Vector3(swing.transform.localScale.x, swing.transform.localScale.y, swing.transform.localScale.z);
     }
 }
