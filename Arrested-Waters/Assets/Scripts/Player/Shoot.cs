@@ -24,6 +24,7 @@ public class Shoot : MonoBehaviour
 
     void ShootNow()
     {
-        Instantiate(shootFX, gunPoint.transform.position, transform.rotation);
+        GameObject fx = Instantiate(shootFX, gunPoint.transform.position, transform.rotation);
+        fx.transform.localScale = player.transform.localScale;
     }
 }
