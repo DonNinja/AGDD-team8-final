@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Arrested_Waters {
     public class InteractableScript : MonoBehaviour {
         protected bool can_interact;
         [SerializeField] protected GameObject interaction_box;
-
-        // Start is called before the first frame update
-        void Start() {
-
-        }
 
         // Update is called once per frame
         void Update() {

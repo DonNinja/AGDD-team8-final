@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour
         rigi = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        attack = transform.GetChild(2).gameObject;
+        //attack = transform.GetChild(2).gameObject;
         audioSource = GetComponent<AudioSource>();
 
         attackTimer = attackSpeed;
@@ -47,8 +47,8 @@ public class EnemyAI : MonoBehaviour
     {
         interestTimer = 0;
         aggro = true;
-        if (!audioSource.isPlaying)
-            audioSource.PlayOneShot(monsterSound);
+        //if (!audioSource.isPlaying)
+            //audioSource.PlayOneShot(monsterSound);
     }
     public void LosePlayer()
     {
@@ -121,7 +121,7 @@ public class EnemyAI : MonoBehaviour
     }
     public void StopAttack()
     {
-        attack.SetActive(false);
+        //attack.SetActive(false);
         walkSpeed = movmentSpeed;
     }
     public void Die()
