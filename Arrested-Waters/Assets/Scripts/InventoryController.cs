@@ -12,9 +12,9 @@ public class InventoryController : MonoBehaviour {
     [SerializeField] TextMeshProUGUI add_text;
     [SerializeField] Animator anim;
 
-    int wood_amt = 0;
-    int metal_amt = 0;
-    int gem_amt = 0;
+    public int wood_amt = 0;
+    public int metal_amt = 0;
+    public int gem_amt = 0;
 
     private void Awake() {
         instance = this;
