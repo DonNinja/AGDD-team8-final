@@ -379,6 +379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1955245217226885038, guid: 6780fe3be2974ff4a9218376d19ab3c4, type: 3}
+      propertyPath: m_Radius
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5280797217537047083, guid: 6780fe3be2974ff4a9218376d19ab3c4, type: 3}
       propertyPath: m_Name
       value: Gem
@@ -393,7 +397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5280797217537047087, guid: 6780fe3be2974ff4a9218376d19ab3c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.58
+      value: -1.33
       objectReference: {fileID: 0}
     - target: {fileID: 5280797217537047087, guid: 6780fe3be2974ff4a9218376d19ab3c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -484,6 +488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal
       objectReference: {fileID: 0}
+    - target: {fileID: 6945998528288078721, guid: 06d3dcc0a8f317f4589739114283940a, type: 3}
+      propertyPath: m_Radius
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06d3dcc0a8f317f4589739114283940a, type: 3}
 --- !u!1001 &8443363471514642586
@@ -493,6 +501,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4476720123542438098, guid: fc2dd8e85cbab0b4a93d46d3e73b7102, type: 3}
+      propertyPath: m_Radius
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8443363470807587713, guid: fc2dd8e85cbab0b4a93d46d3e73b7102, type: 3}
       propertyPath: m_RootOrder
       value: 2
