@@ -83,7 +83,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &8434766120987434072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 8434766121629791673}
   m_Layer: 0
   m_Name: InteractBox-NoStroke
-  m_TagString: Untagged
+  m_TagString: InteractBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
