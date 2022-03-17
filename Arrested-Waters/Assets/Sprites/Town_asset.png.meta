@@ -1,7 +1,100 @@
 fileFormatVersion: 2
 guid: c0976de765a30fe47ab125e928fd2f5e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1991097365417429651
+    second: Town_asset_0
+  - first:
+      213: -7487439498693678331
+    second: Town_asset_1
+  - first:
+      213: 6703490500299871208
+    second: Town_asset_2
+  - first:
+      213: -1953881279505995049
+    second: Town_asset_3
+  - first:
+      213: 3467755971052801904
+    second: Town_asset_4
+  - first:
+      213: 9217730344445164109
+    second: Town_asset_5
+  - first:
+      213: 9122934321758443593
+    second: Town_asset_6
+  - first:
+      213: -7134098290375464857
+    second: Town_asset_7
+  - first:
+      213: 8138367353585504038
+    second: Town_asset_8
+  - first:
+      213: 638974738372613664
+    second: Town_asset_9
+  - first:
+      213: -8664929153922589143
+    second: Town_asset_10
+  - first:
+      213: -2455167918717089308
+    second: Town_asset_11
+  - first:
+      213: 5203818967007261793
+    second: Town_asset_12
+  - first:
+      213: -606819430603694891
+    second: Town_asset_13
+  - first:
+      213: 3634272690206114951
+    second: Town_asset_14
+  - first:
+      213: -7839106137944385832
+    second: Town_asset_15
+  - first:
+      213: 4314355342639742814
+    second: Town_asset_16
+  - first:
+      213: -967294113743445074
+    second: Town_asset_17
+  - first:
+      213: -7966985985728798503
+    second: Town_asset_18
+  - first:
+      213: -6634035704226066885
+    second: Town_asset_19
+  - first:
+      213: -5536517915732290282
+    second: Town_asset_20
+  - first:
+      213: 7284841269689660484
+    second: Town_asset_21
+  - first:
+      213: -4077424787121699944
+    second: Town_asset_22
+  - first:
+      213: 4076946387751507222
+    second: Town_asset_23
+  - first:
+      213: -6497400504238000907
+    second: Town_asset_24
+  - first:
+      213: 5303366066333338311
+    second: Town_asset_25
+  - first:
+      213: -3844675785377288398
+    second: Town_asset_26
+  - first:
+      213: -7412123634084200516
+    second: Town_asset_27
+  - first:
+      213: -5088529653602769530
+    second: Town_asset_28
+  - first:
+      213: 3224655427384885527
+    second: Town_asset_29
+  - first:
+      213: 2206282641345983540
+    second: Town_asset_30
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +134,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +168,684 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Town_asset_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 738
+        width: 84
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65f315de733e54e0800000000000000
+      internalID: -1991097365417429651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 738
+        width: 75
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b62233275471890800000000000000
+      internalID: -7487439498693678331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1132
+        width: 108
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e35499e715970d50800000000000000
+      internalID: 6703490500299871208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_3
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1136
+        width: 76
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da62c1145b62e4e0800000000000000
+      internalID: -1953881279505995049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_4
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1133
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f8756cea1ff1030800000000000000
+      internalID: 3467755971052801904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1136
+        width: 440
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a3eff19e4fbef70800000000000000
+      internalID: 9217730344445164109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_6
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 687
+        width: 93
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94891a52e6c2b9e70800000000000000
+      internalID: 9122934321758443593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_7
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 693
+        width: 367
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768e27927679efc90800000000000000
+      internalID: -7134098290375464857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_8
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 712
+        width: 435
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f891a3df941f070800000000000000
+      internalID: 8138367353585504038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_9
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 231
+        width: 367
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026d52d93281ed800800000000000000
+      internalID: 638974738372613664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_10
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 237
+        width: 367
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e9480e7dcffb780800000000000000
+      internalID: -8664929153922589143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_11
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 627
+        width: 381
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9cee439cd7dedd0800000000000000
+      internalID: -2455167918717089308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_12
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 472
+        width: 381
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16478eb87cda73840800000000000000
+      internalID: 5203818967007261793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_13
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 310
+        width: 381
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dcdf0461f42497f0800000000000000
+      internalID: -606819430603694891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_14
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 61
+        width: 152
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78483aca1c78f6230800000000000000
+      internalID: 3634272690206114951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 125
+        width: 171
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d69d3b3086e53390800000000000000
+      internalID: -7839106137944385832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_16
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 175
+        width: 140
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fb9d0635bafdb30800000000000000
+      internalID: 4314355342639742814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_17
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 96
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3eef4e02b7392f0800000000000000
+      internalID: -967294113743445074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_18
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 102
+        width: 54
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0ae16f4749f6190800000000000000
+      internalID: -7966985985728798503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_19
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 109
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ec856fcab2fe3a0800000000000000
+      internalID: -6634035704226066885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_20
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 117
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615d0341a465a23b0800000000000000
+      internalID: -5536517915732290282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_21
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 116
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44435fcb984f81560800000000000000
+      internalID: 7284841269689660484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_22
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 132
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8930d3d52c31a67c0800000000000000
+      internalID: -4077424787121699944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_23
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 121
+        width: 52
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6159d3a9329349830800000000000000
+      internalID: 4076946387751507222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_24
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 29
+        width: 48
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f433758aa894d5a0800000000000000
+      internalID: -6497400504238000907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_25
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 40
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cac8a1c657599940800000000000000
+      internalID: 5303366066333338311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_26
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 35
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f6a004eb7f4aac0800000000000000
+      internalID: -3844675785377288398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_27
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 29
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf322f63d8d22990800000000000000
+      internalID: -7412123634084200516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_28
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 36
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68527ff7d39e169b0800000000000000
+      internalID: -5088529653602769530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_29
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 26
+        width: 78
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711cf48b60740cc20800000000000000
+      internalID: 3224655427384885527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_asset_30
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 32
+        width: 385
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434b9877f5a4e9e10800000000000000
+      internalID: 2206282641345983540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
