@@ -353,7 +353,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.2924528, g: 0.1300335, b: 0, a: 1}
   m_FlipX: 0
@@ -412,13 +412,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interaction_box: {fileID: 8198920443944652097}
-  wood_req: 0
-  metal_req: 0
-  gem_req: 0
   wood_txt: {fileID: 344003847399558159}
   metal_txt: {fileID: 344003847965892453}
   gem_txt: {fileID: 344003848445718853}
   requirements: {fileID: 344003848307145279}
+  boat_interaction_box: {fileID: 0}
 --- !u!61 &344003847847543646
 BoxCollider2D:
   m_ObjectHideFlags: 0
