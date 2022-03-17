@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 106164143}
   - component: {fileID: 106164142}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08501184, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.06880885, g: 0.81960785, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1452,6 +1452,14 @@ PrefabInstance:
     - target: {fileID: 5280797217537047083, guid: 6780fe3be2974ff4a9218376d19ab3c4, type: 3}
       propertyPath: m_Name
       value: Gem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280797217537047086, guid: 6780fe3be2974ff4a9218376d19ab3c4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280797217537047086, guid: 6780fe3be2974ff4a9218376d19ab3c4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.06880885
       objectReference: {fileID: 0}
     - target: {fileID: 5280797217537047087, guid: 6780fe3be2974ff4a9218376d19ab3c4, type: 3}
       propertyPath: m_RootOrder

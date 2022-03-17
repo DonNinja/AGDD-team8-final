@@ -1,17 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+namespace Arrested_Waters {
 
-public class EnterBoat : MonoBehaviour
-{
-    private void OnTriggerStay2D(Collider2D collision)
+    public class EnterBoat : InteractableScript
     {
-        if (collision.gameObject == GameManager.instance.boat.gameObject)
+        BoatController boat;
+        PlayerController player;
+        bool onBoat;
+
+        private void Start()
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            boat = GameManager.instance.boat;
+            player = GameManager.instance.player;
+        }
+
+        void FixedUpdate()
+        {
+            if (onBoat)
             {
-                Debug.Log("Enter the ship");
+                player.transform.position = boat.playerSeat.transform.position;
             }
         }
+
+        protected override void Interact()
+        {
+            if (onBoat)
+                EnterBoatFunc();
+            else
+                ExitBoatFunc();
+        }
+
+        public void EnterBoatFunc()
+        {
+            GameManager.instance.mainCamera.target = boat.transform;
+            GameManager.instance.mainCamera.GetComponent<Animator>().SetTrigger("zoomOut");
+            boat.enabled = true;
+            player.enabled = false;
+            player.transform.position = boat.playerSeat.transform.position;
+            onBoat = true;
+
+        }
+        public void ExitBoatFunc()
+        {
+            GameManager.instance.mainCamera.target = boat.transform;
+            GameManager.instance.mainCamera.GetComponent<Animator>().SetTrigger("zoomOut");
+            boat.enabled = true;
+            player.enabled = false;
+            player.transform.position = boat.playerSeat.transform.position;
+            onBoat = true;
+
+        }
+
     }
 }
