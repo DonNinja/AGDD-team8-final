@@ -199,7 +199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interaction_box: {fileID: 1463876153}
   boatCamera: {fileID: 2260652958147749854}
-  boatJoint: {fileID: 1438895221}
 --- !u!1 &1438895215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7414671063099183788, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
@@ -217,25 +216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab1cfa756db36a4cb1522bf962257c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!254 &1438895221
-RelativeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438895215}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 2260652958147749853}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_MaxForce: 10000
-  m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
-  m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -8, y: 0.22}
-  m_AngularOffset: 0
 --- !u!1 &1463876153 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8434766121629791671, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
@@ -702,6 +682,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7414671063099183791, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
+      propertyPath: boat
+      value: 
+      objectReference: {fileID: 2260652958147749851}
     - target: {fileID: 7414671064725437097, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
       propertyPath: m_Layer
       value: 7
