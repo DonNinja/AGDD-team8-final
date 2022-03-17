@@ -8653,9 +8653,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1736585412, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+    - target: {fileID: 3363183414675647205, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7414671063099183788, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
       propertyPath: m_Name
@@ -8664,18 +8664,6 @@ PrefabInstance:
     - target: {fileID: 7414671063099183790, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7414671063099183790, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2811015
-      objectReference: {fileID: 0}
-    - target: {fileID: 7414671063099183790, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2811015
-      objectReference: {fileID: 0}
-    - target: {fileID: 7414671063099183790, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2811015
       objectReference: {fileID: 0}
     - target: {fileID: 7414671063099183790, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8717,20 +8705,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7414671063099183791, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
-      propertyPath: moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7414671064725437099, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7763601271653441968, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1736585411, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83166c020ba3eb44b927588da710f7d7, type: 3}
 --- !u!1001 &725110742
 PrefabInstance:
