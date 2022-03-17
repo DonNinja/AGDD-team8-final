@@ -7,6 +7,8 @@ namespace Arrested_Waters {
     {
         BoatController boat;
         PlayerController player;
+        public CameraController boatCamera;
+
         bool onBoat = false;
         bool inBoat = false;
 
@@ -38,6 +40,7 @@ namespace Arrested_Waters {
             GameManager.instance.mainCamera.target = boat.transform;
             GameManager.instance.mainCamera.GetComponent<Animator>().SetTrigger("zoomOut");
             boat.enabled = true;
+            boatCamera.enabled = true;
             player.enabled = false;
             player.transform.position = boat.playerSeat.transform.position;
             onBoat = true;
@@ -49,11 +52,11 @@ namespace Arrested_Waters {
             GameManager.instance.mainCamera.target = player.transform;
             GameManager.instance.mainCamera.GetComponent<Animator>().SetTrigger("zoomOut");
             boat.enabled = false;
+            boatCamera.enabled = false;
             player.enabled = true;
             player.transform.position = boat.playerSeat.transform.position;
             onBoat = false;
 
         }
-
     }
 }
