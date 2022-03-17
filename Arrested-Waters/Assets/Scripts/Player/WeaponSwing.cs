@@ -12,7 +12,7 @@ public class WeaponSwing : MonoBehaviour
     public void Start()
     {
         anim = GetComponent<Animator>();
-        //hitBox = transform.GetChild(0).gameObject;
+        hitBox = transform.GetChild(0).gameObject;
     }
 
 

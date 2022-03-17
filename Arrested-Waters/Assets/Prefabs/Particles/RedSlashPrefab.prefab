@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5587050815802737490}
   - component: {fileID: 4928437717410820017}
   - component: {fileID: 8605649946907546788}
+  - component: {fileID: 4460530229499733783}
   m_Layer: 0
   m_Name: RedSlashPrefab
   m_TagString: Untagged
@@ -4872,6 +4873,20 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4460530229499733783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2562205794301816478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb8476932693344688dc201982e8df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 3
+  justDisable: 0
 --- !u!1 &6691455948273187510
 GameObject:
   m_ObjectHideFlags: 0
