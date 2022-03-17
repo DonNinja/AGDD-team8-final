@@ -12,7 +12,7 @@ public class Damage : MonoBehaviour
     {
         if (!isEnemy)
         {
-            if (collision.gameObject.tag == "MonsterHitBox")
+            if (collision.gameObject.tag == "EnemyHitBox")
             {
                 collision.gameObject.transform.parent.GetComponent<EnemyAI>().TakeDamage(power);
                 Instantiate(blood, collision.transform.position, transform.rotation);
