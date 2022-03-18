@@ -3914,6 +3914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boat
       objectReference: {fileID: 0}
+    - target: {fileID: 1652902381045896085, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8980587839387731908, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.4056

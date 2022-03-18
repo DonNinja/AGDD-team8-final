@@ -12,8 +12,11 @@ namespace Arrested_Waters {
         [SerializeField] TextMeshProUGUI gem_txt;
         [SerializeField] GameObject requirements;
         [SerializeField] GameObject boat_interaction_box;
+        [SerializeField] GameObject sail;
+        [SerializeField] GameObject boat;
+        [SerializeField] Sprite final_boat;
 
-        InventoryController inventoryController;
+        public InventoryController inventoryController;
 
         int wood_req;
         int metal_req;
@@ -24,7 +27,8 @@ namespace Arrested_Waters {
 
         // Start is called before the first frame update
         void Start() {
-            inventoryController = InventoryController.instance;
+            if (GameObject.Find("UI Canvas"))
+                inventoryController = InventoryController.instance;
         }
 
         protected override void Interact() {
@@ -65,7 +69,12 @@ namespace Arrested_Waters {
                     // TODO: Upgrade ship
                     switch (stage) {
                         case 0:
+                            sail.SetActive(true);
 
+                            break;
+
+                        case 1:
+                            boat.GetComponent<SpriteRenderer>().sprite = final_boat;
 
                             break;
 

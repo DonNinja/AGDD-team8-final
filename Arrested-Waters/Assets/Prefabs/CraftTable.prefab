@@ -417,6 +417,10 @@ MonoBehaviour:
   gem_txt: {fileID: 344003848445718853}
   requirements: {fileID: 344003848307145279}
   boat_interaction_box: {fileID: 0}
+  sail: {fileID: 0}
+  boat: {fileID: 0}
+  final_boat: {fileID: -936671485401084529, guid: 699d59da36997c24f90339f96bf9600b, type: 3}
+  inventoryController: {fileID: 0}
 --- !u!61 &344003847847543646
 BoxCollider2D:
   m_ObjectHideFlags: 0
