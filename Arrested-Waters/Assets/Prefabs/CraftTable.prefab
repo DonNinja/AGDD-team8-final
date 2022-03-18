@@ -412,7 +412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcaa89ab574fcbe4ea502dacfe9bff65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  what_do: Upgrade
   interaction_box: {fileID: 8198920443944652097}
+  interaction_text: {fileID: 0}
   wood_txt: {fileID: 344003847399558159}
   metal_txt: {fileID: 344003847965892453}
   gem_txt: {fileID: 344003848445718853}
