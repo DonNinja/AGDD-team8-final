@@ -18,15 +18,27 @@ namespace Arrested_Waters {
 
         public InventoryController inventoryController;
 
+        EnterBoat eb;
         int wood_req;
         int metal_req;
         int gem_req;
-        int stage = 0;
 
         bool has_entered;
 
+        protected override void Update() {
+            if (interaction_box.activeSelf) {
+                if (Input.GetKeyDown(KeyCode.F)) {
+                    Interact();
+                }
+            }
+
+        }
+
         // Start is called before the first frame update
         void Start() {
+            if (GameObject.Find("Boat"))
+                eb = EnterBoat.instance;
+
             if (GameObject.Find("UI Canvas"))
                 inventoryController = InventoryController.instance;
         }
@@ -34,18 +46,18 @@ namespace Arrested_Waters {
         protected override void Interact() {
             if (!requirements.activeSelf) {
                 requirements.SetActive(true);
-                switch (stage) {
+                switch (eb.stage) {
                     case 0:
                         wood_req = 5;
                         metal_req = 2;
-                        gem_req = 1;
+                        gem_req = 0;
 
                         break;
 
                     case 1:
                         wood_req = 50;
                         metal_req = 10;
-                        gem_req = 5;
+                        gem_req = 0;
 
                         break;
 
@@ -67,7 +79,7 @@ namespace Arrested_Waters {
 
                 if (available_wood >= wood_req && available_metal >= metal_req && available_gems >= gem_req) {
                     // TODO: Upgrade ship
-                    switch (stage) {
+                    switch (eb.stage) {
                         case 0:
                             sail.SetActive(true);
 
@@ -87,24 +99,21 @@ namespace Arrested_Waters {
                     inventoryController.metal_amt -= metal_req;
                     inventoryController.gem_amt -= gem_req;
                     Debug.Log("UPGRADING SHIP");
-                    stage++;
-                }
-                else {
-
+                    eb.stage++;
                 }
 
                 requirements.SetActive(false);
             }
         }
 
-        protected override void OnTriggerEnter2D(Collider2D collision) {
-            base.OnTriggerEnter2D(collision);
-            if (boat_interaction_box.activeSelf) {
-                boat_interaction_box.SetActive(false);
-            }
-        }
+        //protected override void OnTriggerEnter2D(Collider2D collision) {
+        //    base.OnTriggerEnter2D(collision);
+            //if (boat_interaction_box.activeSelf) {
+            //    boat_interaction_box.SetActive(false);
+            //}
+        //}
 
-        protected override void OnTriggerExit2D(Collider2D collision) {
+    protected override void OnTriggerExit2D(Collider2D collision) {
             base.OnTriggerExit2D(collision);
 
             if (collision.name == "InteractionCollider") {
