@@ -54,6 +54,7 @@ public class BoatController : MonoBehaviour
     public GameObject cg;
     public GameObject sail;
     public GameObject playerSeat;
+    public GameObject boatFX;
 
     //controls
     public InputController InputController;
@@ -245,6 +246,7 @@ public class BoatController : MonoBehaviour
             frontAxle.rightTire.friction = Mathf.Clamp(-cornerStiffFront * frontAxle.slipAngle, -frontAxle.rightTire.grip, frontAxle.rightTire.grip) * frontAxle.rightTire.activeWeight;
             rearAxle.leftTire.friction = Mathf.Clamp(-cornerStiffRear * rearAxle.slipAngle, -rearAxle.leftTire.grip, rearAxle.leftTire.grip) * rearAxle.leftTire.activeWeight;
             rearAxle.rightTire.friction = Mathf.Clamp(-cornerStiffRear * rearAxle.slipAngle, -rearAxle.rightTire.grip, rearAxle.rightTire.grip) * rearAxle.rightTire.activeWeight;
+            boatFX.SetActive(true);
         }
         else
         {
@@ -252,6 +254,7 @@ public class BoatController : MonoBehaviour
             frontAxle.rightTire.friction = Mathf.Clamp(-cornerStiffFront * frontAxle.slipAngle, -frontAxle.rightTire.grip, frontAxle.rightTire.grip) * frontAxle.rightTire.activeWeight * 0.1f;
             rearAxle.leftTire.friction = Mathf.Clamp(-cornerStiffRear * rearAxle.slipAngle, -rearAxle.leftTire.grip, rearAxle.leftTire.grip) * rearAxle.leftTire.activeWeight * 0.1f;
             rearAxle.rightTire.friction = Mathf.Clamp(-cornerStiffRear * rearAxle.slipAngle, -rearAxle.rightTire.grip, rearAxle.rightTire.grip) * rearAxle.rightTire.activeWeight * 0.1f;
+            boatFX.SetActive(false);
         }
 
         //sum forces

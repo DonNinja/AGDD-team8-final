@@ -38,7 +38,6 @@ public class EnemySight : MonoBehaviour
                 Debug.Log(hit.collider.gameObject);
                 if (hit.collider.gameObject == watchingTarget && angle <= sightRadius)
                 {
-                    Debug.Log("Yes");
                     ai.SpottPlayer(watchingTarget);
                 }
             }
