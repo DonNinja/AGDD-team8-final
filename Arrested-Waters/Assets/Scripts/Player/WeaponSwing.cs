@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponSwing : MonoBehaviour
 {
     public GameObject weaponSwingFX;
+    public GameObject weaponSwingFX2;
     public Transform spawnLocation;
     private Animator anim;
     private GameObject hitBox;
@@ -43,11 +44,10 @@ public class WeaponSwing : MonoBehaviour
     }
     public void SpawnEffect2()
     {
-        GameObject swing = Instantiate(weaponSwingFX, spawnLocation.position, spawnLocation.parent.rotation);
+        GameObject swing = Instantiate(weaponSwingFX2, spawnLocation.position, spawnLocation.parent.rotation);
         swing.transform.localScale = (player.transform.localScale) / 2;
         swing.transform.GetChild(0).localScale = (player.transform.localScale) / 2;
-        swing.transform.rotation = Quaternion.Euler(swing.transform.rotation.x, swing.transform.rotation.y, swing.transform.rotation.z-180);
-        swing.transform.localScale = new Vector3(swing.transform.localScale.x, swing.transform.localScale.y*-1, swing.transform.localScale.z);
+        swing.transform.localScale = new Vector3(swing.transform.localScale.x*-1, swing.transform.localScale.y, swing.transform.localScale.z);
         swing.transform.GetChild(0).localScale = new Vector3(swing.transform.localScale.x, swing.transform.localScale.y, swing.transform.localScale.z);
     }
 }

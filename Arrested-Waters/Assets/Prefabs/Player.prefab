@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 692932864}
   m_Layer: 7
   m_Name: HitBox
-  m_TagString: EnemyHitBox
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 1736585409}
   m_Layer: 7
   m_Name: Axe
-  m_TagString: Untagged
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,7 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4b6cf32c9cd2541a89c96aeb7c0c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSwingFX: {fileID: 2562205794301816478, guid: 6e7b29fbe34cc9443b9299e489ef8205, type: 3}
+  weaponSwingFX: {fileID: 2562205794301816478, guid: 0340c42ccf2fc284e9b2565cd0cc76b0, type: 3}
+  weaponSwingFX2: {fileID: 2562205794301816478, guid: 6e7b29fbe34cc9443b9299e489ef8205, type: 3}
   spawnLocation: {fileID: 578000199}
 --- !u!1 &3363183414675647205
 GameObject:
