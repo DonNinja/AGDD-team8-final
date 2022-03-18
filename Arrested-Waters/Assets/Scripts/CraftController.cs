@@ -98,6 +98,7 @@ namespace Arrested_Waters {
                     inventoryController.wood_amt -= wood_req;
                     inventoryController.metal_amt -= metal_req;
                     inventoryController.gem_amt -= gem_req;
+
                     Debug.Log("UPGRADING SHIP");
                     eb.stage++;
                 }
