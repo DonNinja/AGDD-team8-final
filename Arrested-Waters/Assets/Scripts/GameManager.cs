@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,9 +22,22 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject); // Destroy the GameObject, this component is attached to
         }
+    }
+
+    private void OnEnable()
+    {
         player = GameObject.Find("Player").GetComponent<PlayerController>();
         boat = GameObject.Find("Boat").GetComponent<BoatController>();
         mainCamera = GameObject.Find("Main Camera").GetComponent<CameraFollowTarget>();
     }
 
+    public void OnDeath()
+    {
+        SceneManager.LoadScene("MapCreation");
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene("EndGame");
+    }
 }
