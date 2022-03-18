@@ -19,11 +19,20 @@ public class CameraController : MonoBehaviour
     {
         WaitForSeconds myWait = new WaitForSeconds(smoothness);
         Camera.main.orthographicSize = minZoom; //you could also comment this line out and just use your current zoomValue... It's just for having a start position for the zoomanimation
+
         while (Camera.main.orthographicSize < maxZoom)
         {
-            Camera.main.orthographicSize += zoomStep * boat.speedKPH; //take your players one for the velocity  
+            if (boat.enabled)
+            {
+                Camera.main.orthographicSize += zoomStep * boat.speedKPH;
+            }
+            else
+            {
+                Camera.main.orthographicSize = 3; //take your players one for the velocity  
+            }
             yield return myWait;
         }
+
         Camera.main.orthographicSize = maxZoom; //ensure it is exactly set to the maxZoom value after the animation
     }
 

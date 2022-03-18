@@ -52,7 +52,6 @@ namespace Arrested_Waters {
             player.enabled = true;
             player.transform.position = boat.playerSeat.transform.position;
             onBoat = false;
-            GameManager.instance.mainCamera.GetComponent<Camera>().orthographicSize = 3;
         }
 
 
