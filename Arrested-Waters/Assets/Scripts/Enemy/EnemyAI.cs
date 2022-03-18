@@ -61,13 +61,6 @@ public class EnemyAI : MonoBehaviour
     {
         path.maxSpeed = walkSpeed;
         //anim.SetFloat("Speed", path.velocity.magnitude);
-        if (aggro)
-        {
-            path.destination = player.transform.position;
-            interestTimer += Time.deltaTime;
-            if (interestTimer >= interestTime)
-                LosePlayer();
-        }
 
 
         ImuneTime -= Time.deltaTime;
@@ -87,6 +80,17 @@ public class EnemyAI : MonoBehaviour
         if ((player.transform.position - transform.position).magnitude <= attackRange && attackTimer >= attackSpeed && path.canMove == true && aggro == true)
         {
             Attack();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (aggro)
+        {
+            path.destination = player.transform.position;
+            interestTimer += Time.deltaTime;
+            if (interestTimer >= interestTime)
+                LosePlayer();
         }
     }
 
