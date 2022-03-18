@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 692932864}
   m_Layer: 7
   m_Name: HitBox
-  m_TagString: EnemyHitBox
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 1736585409}
   m_Layer: 7
   m_Name: Axe
-  m_TagString: Untagged
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

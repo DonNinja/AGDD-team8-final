@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6087772906403474888}
   - component: {fileID: 7199331125432191793}
   - component: {fileID: 8893969630233676681}
+  - component: {fileID: -3657510105283160232}
   m_Layer: 0
   m_Name: Crate01
   m_TagString: Untagged
@@ -113,3 +114,16 @@ PolygonCollider2D:
       - {x: 0.29999998, y: -0.53999996}
       - {x: 0.53, y: -0.53}
       - {x: 0.53, y: 0.53999996}
+--- !u!114 &-3657510105283160232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7766443215425795960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893e083124a9aa643b3fe86f6e43729f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 440130454504082428, guid: fa9c29c2a4b7aa04ba9afd75d55a936f, type: 3}
