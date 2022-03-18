@@ -65,6 +65,7 @@ namespace Arrested_Waters {
             if (stage == 0) {
                 interaction_box.SetActive(false); // Show the interaction box
             }
+            player.onBoat = true;
             //if (collision.name == "InteractionCollider") {
             //    upgrade_box.SetActive(true);
             //}
