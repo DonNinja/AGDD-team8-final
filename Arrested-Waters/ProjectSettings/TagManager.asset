@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - EnemyHitBox
+  - InteractBox
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Island
   - Water
   - UI
   - Boat
