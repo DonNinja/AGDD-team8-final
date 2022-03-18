@@ -17,7 +17,8 @@ public class InventoryController : MonoBehaviour {
     public int gem_amt = 0;
 
     private void Awake() {
-        instance = this;
+        if (!instance)
+            instance = this;
         add_text.enabled = false;
     }
 

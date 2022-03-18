@@ -3,38 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Arrested_Waters {
 
-    public class EnterBoat : InteractableScript
-    {
+    public class EnterBoat : InteractableScript {
+        public static EnterBoat instance;
+
         BoatController boat;
         PlayerController player;
+
+        [Header("Boat")]
         public CameraController boatCamera;
+        public int stage = 0;
+        [SerializeField] protected GameObject upgrade_box;
 
         bool onBoat = false;
 
-        private void Start()
-        {
+        private void Awake() {
+            if (!instance) {
+                instance = this;
+            }
+        }
+
+        private void Start() {
             boat = GameManager.instance.boat;
             player = GameManager.instance.player;
         }
 
-        void FixedUpdate()
-        {
-            if (onBoat)
-            {
+        void FixedUpdate() {
+            if (onBoat) {
                 player.transform.position = boat.playerSeat.transform.position;
             }
         }
 
-        protected override void Interact()
-        {
+        protected override void Interact() {
             if (!onBoat)
                 EnterBoatFunc();
             else
                 ExitBoatFunc();
         }
 
-        public void EnterBoatFunc()
-        {
+        public void EnterBoatFunc() {
             Debug.Log("Enter");
             GameManager.instance.mainCamera.target = boat.transform;
             boat.enabled = true;
@@ -42,9 +48,9 @@ namespace Arrested_Waters {
             player.onBoat = true;
             player.enabled = false;
             player.transform.position = boat.playerSeat.transform.position;
-            onBoat = true;        }
-        public void ExitBoatFunc()
-        {
+            onBoat = true;
+        }
+        public void ExitBoatFunc() {
             Debug.Log("Exit");
             GameManager.instance.mainCamera.target = player.transform;
             boat.enabled = false;
@@ -54,9 +60,18 @@ namespace Arrested_Waters {
             onBoat = false;
         }
 
+        protected override void OnTriggerEnter2D(Collider2D collision) {
+            base.OnTriggerEnter2D(collision);
+            if (stage == 0) {
+                interaction_box.SetActive(false); // Show the interaction box
+            }
+            //if (collision.name == "InteractionCollider") {
+            //    upgrade_box.SetActive(true);
+            //}
+        }
 
-        protected override void OnTriggerExit2D(Collider2D col)
-        {
+
+        protected override void OnTriggerExit2D(Collider2D col) {
             base.OnTriggerExit2D(col);
             player.onBoat = false;
             Debug.Log("Left Boat");
