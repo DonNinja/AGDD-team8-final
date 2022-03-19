@@ -32,19 +32,19 @@ public class InventoryController : MonoBehaviour {
             gem_text.text = gem_amt.ToString();
     }
 
-    public void IncreaseInventory(ItemController.Material mat_type) {
+    public void IncreaseInventory(CollectableController.Material mat_type) {
         add_text.alpha = 1.0f;
 
         switch (mat_type) {
-            case ItemController.Material.Wood:
+            case CollectableController.Material.Wood:
                 wood_amt += 1;
                 add_text.transform.position = wood_text.transform.position;
                 break;
-            case ItemController.Material.Metal:
+            case CollectableController.Material.Metal:
                 metal_amt += 1;
                 add_text.transform.position = metal_text.transform.position;
                 break;
-            case ItemController.Material.Gems:
+            case CollectableController.Material.Gems:
                 gem_amt += 1;
                 add_text.transform.position = gem_text.transform.position;
                 break;

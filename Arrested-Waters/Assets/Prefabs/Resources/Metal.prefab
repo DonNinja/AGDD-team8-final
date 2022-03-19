@@ -124,6 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_name: Player
+  wall:
+    serializedVersion: 2
+    m_Bits: 4096
   mat_type: 1
 --- !u!58 &6945998528288078721
 CircleCollider2D:
@@ -138,6 +141,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.24122715, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 7.5258856
+  m_Radius: 3

@@ -60,15 +60,19 @@ namespace Arrested_Waters {
             onBoat = false;
         }
 
+        public void IncreaseStage() {
+            stage++;
+            if (stage == 1) {
+                interaction_box.SetActive(true);
+            }
+        }
+
         protected override void OnTriggerEnter2D(Collider2D collision) {
             base.OnTriggerEnter2D(collision);
             if (stage == 0) {
-                interaction_box.SetActive(false); // Show the interaction box
+                interaction_box.SetActive(false);
             }
             player.onBoat = true;
-            //if (collision.name == "InteractionCollider") {
-            //    upgrade_box.SetActive(true);
-            //}
         }
 
 
