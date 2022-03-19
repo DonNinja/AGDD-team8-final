@@ -50,13 +50,14 @@ public class CollectableController : MonoBehaviour {
         //      1. the player is within range,
         //      2. it hasn't been picked up yes (to prevent it getting picked up twice)
         //      3. that the item has a direct line to the player
-        if (collision.gameObject.name == player_name && !is_picked_up && HasDirectLine(gameObject.transform, other.transform)) {
+        if (other.name == player_name && !is_picked_up && HasDirectLine(gameObject.transform, other.transform)) {
             // Float toward the player
             Vector3 dir_vec = (other.transform.position - gameObject.transform.position).normalized;
 
             float dist = Vector2.Distance(other.transform.position, gameObject.transform.position);
 
-            gameObject.transform.position += dir_vec * (trigger_rad - dist) * Time.deltaTime; // Move towards playr at speed
+            // Move towards player at speed determined by distance
+            gameObject.transform.position += dir_vec * (trigger_rad - dist) * Time.deltaTime;
         }
     }
 
