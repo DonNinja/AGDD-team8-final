@@ -42,7 +42,6 @@ namespace Arrested_Waters {
             if (GameObject.Find("UI Canvas"))
                 inventoryController = InventoryController.instance;
         }
-
         protected override void Interact() {
             if (!requirements.activeSelf) {
                 requirements.SetActive(true);
@@ -100,7 +99,7 @@ namespace Arrested_Waters {
                     inventoryController.gem_amt -= gem_req;
 
                     Debug.Log("UPGRADING SHIP");
-                    eb.stage++;
+                    eb.IncreaseStage();
                 }
 
                 requirements.SetActive(false);
