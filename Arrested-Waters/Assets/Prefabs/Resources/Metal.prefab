@@ -124,6 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_name: Player
+  wall:
+    serializedVersion: 2
+    m_Bits: 4096
   mat_type: 1
 --- !u!58 &6945998528288078721
 CircleCollider2D:

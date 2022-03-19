@@ -35,7 +35,7 @@ public class EnemySight : MonoBehaviour
             if (hit)
             {
                 angle = Vector2.Angle((watchingTarget.transform.position - transform.position), (visionDirection.position - transform.position));
-                Debug.Log(hit.collider.gameObject);
+                //Debug.Log(hit.collider.gameObject);
                 if (hit.collider.gameObject == watchingTarget && angle <= sightRadius)
                 {
                     ai.SpottPlayer(watchingTarget);
