@@ -8,7 +8,7 @@ public class Brakable : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Axe")
+        if (collision.gameObject.tag == "Attack")
         {
             Instantiate(particles, collision.transform.position, transform.rotation);
             Destroy(gameObject);

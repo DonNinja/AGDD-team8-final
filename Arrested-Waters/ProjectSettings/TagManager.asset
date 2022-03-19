@@ -7,6 +7,7 @@ TagManager:
   - EnemyHitBox
   - InteractBox
   - Axe
+  - Attack
   layers:
   - Default
   - TransparentFX

@@ -116,7 +116,7 @@ public class EnemyAI : MonoBehaviour
     public void Attack()
     {
         attackTimer = 0;
-        //attack.SetActive(true);
+        attack.SetActive(true);
 
         Debug.Log("Attack");
 
@@ -125,7 +125,7 @@ public class EnemyAI : MonoBehaviour
     }
     public void StopAttack()
     {
-        //attack.SetActive(false);
+        attack.SetActive(false);
         walkSpeed = movmentSpeed;
     }
     public void Die()
