@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     private Animator anim;
     public AudioClip monsterSound;
     public AudioSource audioSource;
+    public float attackWalkSpeed;
 
     public float movmentSpeed = 6;
     public float attackSpeed = 2;
@@ -120,7 +121,7 @@ public class EnemyAI : MonoBehaviour
 
         Debug.Log("Attack");
 
-        walkSpeed = movmentSpeed / 6;
+        walkSpeed = attackWalkSpeed;
         Invoke("StopAttack", 1.35f);
     }
     public void StopAttack()
