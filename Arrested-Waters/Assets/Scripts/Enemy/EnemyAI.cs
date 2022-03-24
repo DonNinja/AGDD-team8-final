@@ -18,9 +18,11 @@ public class EnemyAI : MonoBehaviour
     public AudioSource audioSource;
     public float attackWalkSpeed;
 
+    public bool immuneToStagger = false;
     public float movmentSpeed = 6;
     public float attackSpeed = 2;
     private float attackTimer;
+    public float attackAnimationtime;
     public float attackRange = 5;
 
     private float walkSpeed;
@@ -107,10 +109,13 @@ public class EnemyAI : MonoBehaviour
                 Die();
             }
 
-               path.canMove = false;
-               rigi.velocity = (player.transform.position - transform.position).normalized * -10;
-               rigi.AddForce((player.transform.position - transform.position).normalized * -10000);
-               StopAttack();
+            if (!immuneToStagger)
+            {
+                path.canMove = false;
+                rigi.velocity = (player.transform.position - transform.position).normalized * -10;
+                rigi.AddForce((player.transform.position - transform.position).normalized * -10000);
+                StopAttack();
+            }
         }
     }
 
@@ -122,7 +127,7 @@ public class EnemyAI : MonoBehaviour
         Debug.Log("Attack");
 
         walkSpeed = attackWalkSpeed;
-        Invoke("StopAttack", 1.35f);
+        Invoke("StopAttack", attackAnimationtime);
     }
     public void StopAttack()
     {

@@ -111,9 +111,10 @@ MonoBehaviour:
   attack: {fileID: 4638871734182684617}
   monsterSound: {fileID: 0}
   audioSource: {fileID: 0}
-  attackWalkSpeed: 0.2
+  attackWalkSpeed: 0.3
   movmentSpeed: 1
   attackSpeed: 1.5
+  attackAnimationtime: 1.25
   attackRange: 0.5
   interestTime: 10
 --- !u!114 &3951605221173058056
