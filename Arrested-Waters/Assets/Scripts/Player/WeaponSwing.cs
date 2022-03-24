@@ -7,9 +7,11 @@ public class WeaponSwing : MonoBehaviour
     public GameObject weaponSwingFX;
     public GameObject weaponSwingFX2;
     public Transform spawnLocation;
+    public GameObject gun;
     private Animator anim;
     private GameObject hitBox;
     private PlayerController player;
+
 
     public void Start()
     {
@@ -25,6 +27,15 @@ public class WeaponSwing : MonoBehaviour
         {
             anim.SetTrigger("Attack");
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            anim.SetBool("gunmode", true);
+        }
+        if (Input.GetMouseButtonUp(1))
+        {
+            anim.SetBool("gunmode", false);
+        }
+
     }
 
     public void ActiveTrigger()
@@ -34,6 +45,17 @@ public class WeaponSwing : MonoBehaviour
     public void DeactiavteTrigger()
     {
         hitBox.SetActive(false);
+    }
+
+    public void ActivateGun()
+    {
+        player.isAiming = true;
+        gun.SetActive(true);
+    }
+    public void DeactivateGun()
+    {
+        player.isAiming = false;
+        gun.SetActive(false);
     }
 
     public void SpawnEffect()

@@ -256,6 +256,7 @@ MonoBehaviour:
   weaponSwingFX: {fileID: 2562205794301816478, guid: 0340c42ccf2fc284e9b2565cd0cc76b0, type: 3}
   weaponSwingFX2: {fileID: 2562205794301816478, guid: 6e7b29fbe34cc9443b9299e489ef8205, type: 3}
   spawnLocation: {fileID: 578000199}
+  gun: {fileID: 3771867630119062228}
 --- !u!1 &3363183414675647205
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3771867630119062228}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: -0.000000059604645}
-  m_LocalPosition: {x: -0.615, y: -0.369, z: 0}
+  m_LocalPosition: {x: -0.62, y: 0, z: 0}
   m_LocalScale: {x: 0.83784616, y: 1.208432, z: 0.92071}
   m_Children:
   - {fileID: 606074633}
@@ -429,6 +430,8 @@ GameObject:
   - component: {fileID: 7414671063099183785}
   - component: {fileID: 4286413223371140379}
   - component: {fileID: 7414671063099183791}
+  - component: {fileID: 1239473082219465290}
+  - component: {fileID: 7024389306347951234}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -511,6 +514,41 @@ MonoBehaviour:
   gun: {fileID: 3771867630119062228}
   axe: {fileID: 1736585407}
   interaction_collider: {fileID: 1109304067126158368}
+--- !u!114 &1239473082219465290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414671063099183788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ec00318e43a6440a937f75369c6daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  defeated: 0
+--- !u!95 &7024389306347951234
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414671063099183788}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c006f53d058322d41b8cc5269c8ba5a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7414671064725437097
 GameObject:
   m_ObjectHideFlags: 0
