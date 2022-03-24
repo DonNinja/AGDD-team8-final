@@ -1,0 +1,12 @@
+Main dialogue:
+	"A newcomer? Welcome to the arrested sea."
+	"This sea is for those of us who broke the sacred laws."
+	"This island is a place for those of us more civilised to keep from getting killed."
+	"I've heard that someone got out, so it might still be possible."
+
+Repeating dialogue:
+	"Good luck getting out."
+	"Don't die, or do, I'm not your mom."
+	"Nice boat."
+	"I'm really close to just sailing out."
+	
