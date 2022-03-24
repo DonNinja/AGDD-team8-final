@@ -40,10 +40,10 @@ GameObject:
   m_Component:
   - component: {fileID: 870650103887710444}
   - component: {fileID: 4693104446888397061}
-  - component: {fileID: 5580810399572383530}
   - component: {fileID: 2989533379588609954}
+  - component: {fileID: 4440334605699506663}
   m_Layer: 0
-  m_Name: EnemyWeapon
+  m_Name: EnemyWeaponBow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,25 +116,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5580810399572383530
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8477797929066023512}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 892224554426f7646809aa447dcb0b81, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2989533379588609954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +131,25 @@ MonoBehaviour:
   weaponSwingFX: {fileID: 5314723464771816539, guid: 5a5ad367588273542b805f666151fd48, type: 3}
   weaponSwingFX2: {fileID: 1565876250946541040, guid: fa28f444c2fbda249b02c3ac88531c42, type: 3}
   spawnLocation: {fileID: 778747742952561241}
+--- !u!95 &4440334605699506663
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477797929066023512}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8867921572849026167
 GameObject:
   m_ObjectHideFlags: 0

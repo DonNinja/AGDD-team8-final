@@ -8,27 +8,15 @@ public class PlayerStats : MonoBehaviour
     public int currentHealth;
     private float imunity;
 
-    //private HealthBar healthBar;
-
-    private GameObject damageFlash;
+    public HealthBar healthBar;
 
     public bool defeated;
-
-    public void Awake()
-    {
-
-        //healthBar = FindObjectOfType<HealthBar>();
-        // Damage Flash is the second child of the Canvas in the scene.
-        //damageFlash = GameObject.Find("Canvas").transform.GetChild(1).gameObject;
-
-
-    }
 
     public void Start()
     {
 
         currentHealth = maxHealth;
-        //healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void Update()
@@ -42,11 +30,11 @@ public class PlayerStats : MonoBehaviour
         if (imunity <= 0)
         {
             imunity = 1;
-            //StartCoroutine(DamageAnimation());
+            
 
             currentHealth -= dmg;
 
-            //healthBar.SetHealth(currentHealth);
+            healthBar.SetHealth(currentHealth);
 
             if (currentHealth <= 0)
             {
@@ -57,11 +45,4 @@ public class PlayerStats : MonoBehaviour
             }
         }
     }
-
-   // IEnumerator DamageAnimation()
-   // {
-        //damageFlash.SetActive(true);
-        //yield return new WaitForSeconds(0.4f);
-        //damageFlash.SetActive(false);
-    //}
 }

@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal");
         // Get y-value of movement. Works with arrow keys and WASD.
         movement.y = Input.GetAxis("Vertical");
-        isAiming = Input.GetMouseButton(1);
+        
     }
 
     void FixedUpdate()
@@ -77,12 +77,12 @@ public class PlayerController : MonoBehaviour
 
     private void AimGun()
     {
-        gun.SetActive(true);
+        //gun.SetActive(true);  //Axe Animation is now controlling the gun activation
         interaction_collider.enabled = false;
     }
     private void PutGunDown()
     {
-        gun.SetActive(false);
+        //gun.SetActive(false);
         interaction_collider.enabled = true;
     }
 }
