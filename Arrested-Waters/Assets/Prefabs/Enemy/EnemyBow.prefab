@@ -112,6 +112,7 @@ MonoBehaviour:
   monsterSound: {fileID: 0}
   audioSource: {fileID: 0}
   attackWalkSpeed: 0
+  immuneToStagger: 0
   movmentSpeed: 1
   attackSpeed: 4
   attackAnimationtime: 0.5
@@ -234,7 +235,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0
   pickNextWaypointDist: 2
-  endReachedDistance: 0.39
+  endReachedDistance: 3
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
