@@ -18,11 +18,6 @@ public class CollectableController : MonoBehaviour {
         trigger_rad = gameObject.GetComponent<CircleCollider2D>().radius;
     }
 
-    // Update is called once per frame
-    void Update() {
-
-    }
-
     private bool HasDirectLine(Transform from, Transform to) {
         Vector3 ray_start = from.position;
         Vector3 ray_end = to.position;

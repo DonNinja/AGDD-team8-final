@@ -12,9 +12,12 @@ public class EnableWhenPlayerClose : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ai.enabled = true;
-        sight.enabled = true;
-        path.enabled = true;
+        if (collision.gameObject == GameManager.instance.player.gameObject)
+        {
+            ai.enabled = true;
+            sight.enabled = true;
+            path.enabled = true;
+        }
     }
 
 }
