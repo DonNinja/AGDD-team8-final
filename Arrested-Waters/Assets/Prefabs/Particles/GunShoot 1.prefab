@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1201460273043858709}
   - component: {fileID: 2362635336592569001}
   - component: {fileID: 5779215036664975146}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4882,9 +4882,9 @@ GameObject:
   - component: {fileID: 8150802747712722526}
   - component: {fileID: 4376201651896773920}
   - component: {fileID: 8904941157357113528}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HitBox
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4949,6 +4949,7 @@ MonoBehaviour:
   power: 30
   isEnemy: 0
   blood: {fileID: 7901248356177016559, guid: b80fdceef44d19b40adb375aa14e47f5, type: 3}
+  gun: {fileID: 0}
 --- !u!1 &3208756229646439691
 GameObject:
   m_ObjectHideFlags: 0
@@ -4961,7 +4962,7 @@ GameObject:
   - component: {fileID: 4257474882896417085}
   - component: {fileID: 1308617760831829469}
   - component: {fileID: 2217447939101254174}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunShoot 1
   m_TagString: Attack
   m_Icon: {fileID: 0}

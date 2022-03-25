@@ -7,15 +7,19 @@ public class Damage : MonoBehaviour
     public float power;
     public bool isEnemy;
     public GameObject blood;
+    public Shoot gun;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Hello");
         if (!isEnemy)
         {
             if (collision.gameObject.tag == "EnemyHitBox")
             {
                 collision.gameObject.transform.parent.GetComponent<EnemyAI>().TakeDamage(power);
                 Instantiate(blood, collision.transform.position, transform.rotation);
+                if (gun)
+                    gun.GetAmmo();
             }
         }
         else
