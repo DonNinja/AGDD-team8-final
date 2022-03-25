@@ -11,7 +11,6 @@ public class Damage : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hello");
         if (!isEnemy)
         {
             if (collision.gameObject.tag == "EnemyHitBox")

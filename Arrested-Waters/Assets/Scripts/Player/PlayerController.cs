@@ -63,8 +63,8 @@ public class PlayerController : MonoBehaviour
         //animator.SetFloat("Speed", movement.sqrMagnitude);
 
         //Rotate toward mouse
-        Vector2 positionOnScreen = Camera.main.WorldToViewportPoint(transform.position);
-        Vector2 mouseOnScreen = (Vector2)Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        Vector2 positionOnScreen = transform.position;
+        Vector2 mouseOnScreen = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         // }
