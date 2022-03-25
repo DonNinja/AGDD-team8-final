@@ -124,14 +124,11 @@ public class EnemyAI : MonoBehaviour
         attackTimer = 0;
         attack.SetActive(true);
 
-        Debug.Log("Attack");
-
         walkSpeed = attackWalkSpeed;
         Invoke("StopAttack", attackAnimationtime);
     }
     public void StopAttack()
     {
-        Debug.Log("Attack stop");
         attack.SetActive(false);
         walkSpeed = movmentSpeed;
     }
