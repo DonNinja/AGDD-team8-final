@@ -131,6 +131,7 @@ public class EnemyAI : MonoBehaviour
     }
     public void StopAttack()
     {
+        Debug.Log("Attack stop");
         attack.SetActive(false);
         walkSpeed = movmentSpeed;
     }
