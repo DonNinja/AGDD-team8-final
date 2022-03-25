@@ -960,9 +960,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -838496533
+  m_SortingLayer: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: -4032481707582436298, guid: 699d59da36997c24f90339f96bf9600b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1046,7 +1046,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5353f99a8410c4180a49502272a66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  what_do: 
   interaction_box: {fileID: 8980587839895678500}
+  interaction_text: {fileID: 0}
   boatCamera: {fileID: 1652902380845778513}
   stage: 0
   upgrade_box: {fileID: 0}
@@ -1118,9 +1120,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -838496533
+  m_SortingLayer: 4
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: e9b1871591bcbdc4a975830f4c9cc9f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

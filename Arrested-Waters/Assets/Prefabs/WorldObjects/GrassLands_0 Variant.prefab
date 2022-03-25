@@ -63,6 +63,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.22745098
       objectReference: {fileID: 0}
+    - target: {fileID: 6003226479102494743, guid: 513b02f789834e84ea129647645eb75e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6003226479102494743, guid: 513b02f789834e84ea129647645eb75e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6003226479102494743, guid: 513b02f789834e84ea129647645eb75e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -966541973
+      objectReference: {fileID: 0}
     - target: {fileID: 6834714983584265933, guid: 513b02f789834e84ea129647645eb75e, type: 3}
       propertyPath: m_Name
       value: GrassLands_0 Variant

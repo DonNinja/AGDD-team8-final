@@ -42,6 +42,33 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2881468107
+    locked: 0
+  - name: Island
+    uniqueID: 3328425323
+    locked: 0
+  - name: Water
+    uniqueID: 1602974293
+    locked: 0
+  - name: Player&Boat
+    uniqueID: 3456470763
+    locked: 0
+  - name: Misc&Resources
+    uniqueID: 2316161375
+    locked: 0
+  - name: Foliage
+    uniqueID: 3972560779
+    locked: 0
+  - name: Terrain
+    uniqueID: 2508361985
+    locked: 0
+  - name: Effects
+    uniqueID: 3867563075
+    locked: 0
+  - name: Filters
+    uniqueID: 3887697985
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

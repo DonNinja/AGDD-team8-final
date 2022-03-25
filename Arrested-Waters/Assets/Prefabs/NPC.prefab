@@ -71,9 +71,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -838496533
+  m_SortingLayer: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 9ed033e9b9cf271448c10ac37634abe0, type: 3}
   m_Color: {r: 1, g: 0.7688679, b: 0.9082297, a: 1}
   m_FlipX: 0
@@ -123,7 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d416c353409b1468d43ae5689e2e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  what_do: 
   interaction_box: {fileID: 1432117320219677711}
+  interaction_text: {fileID: 0}
   main_dialogue:
   - Hello, human. My name is whatever you want to call me.
   - main 2
