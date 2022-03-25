@@ -22,8 +22,13 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
-        if (canShoot && Input.GetMouseButtonDown(0) && player.isAiming)
+        if (canShoot && Input.GetMouseButtonDown(0) && player.isAiming && currentAmmo > 0)
             ShootNow();
+    }
+
+    private void OnDisable()
+    {
+        canShoot = true;
     }
 
     void ShootNow()
@@ -31,14 +36,30 @@ public class Shoot : MonoBehaviour
         GameObject fx = Instantiate(shootFX, gunPoint.transform.position, transform.rotation);
         fx.transform.localScale = player.transform.localScale;
         currentAmmo -= 1;
+        UpdateUI();
+        canShoot = false;
+        StartCoroutine(cooldownCorotine());
+    }
+
+    void UpdateUI()
+    {
         for (int i = 0; i < maxAmmo; i++)
         {
             ammoUIslot[i].SetActive(false);
             if (i < currentAmmo)
                 ammoUIslot[i].SetActive(true);
         }
-        canShoot = false;
-        StartCoroutine(cooldownCorotine());
+    }
+
+    public void GetAmmo()
+    {
+        if (currentAmmo > maxAmmo)
+        {
+            currentAmmo++;
+            UpdateUI();
+        }
+
+
     }
 
     IEnumerator cooldownCorotine()

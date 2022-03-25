@@ -18,8 +18,7 @@ public class EnemySight : MonoBehaviour
     public void Start()
     {
         ai = gameObject.GetComponent<EnemyAI>();
-        if (!watchingTarget)
-            watchingTarget = GameManager.instance.player.gameObject;
+        watchingTarget = GameManager.instance.player.gameObject;
     }
 
     public void FixedUpdate()
