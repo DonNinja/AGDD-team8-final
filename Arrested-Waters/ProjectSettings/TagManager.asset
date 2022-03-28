@@ -51,6 +51,9 @@ TagManager:
   - name: Water
     uniqueID: 1602974293
     locked: 0
+  - name: Effects
+    uniqueID: 3867563075
+    locked: 0
   - name: Player&Boat
     uniqueID: 3456470763
     locked: 0
@@ -62,9 +65,6 @@ TagManager:
     locked: 0
   - name: Terrain
     uniqueID: 2508361985
-    locked: 0
-  - name: Effects
-    uniqueID: 3867563075
     locked: 0
   - name: Filters
     uniqueID: 3887697985
