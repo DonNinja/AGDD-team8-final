@@ -78,8 +78,11 @@ namespace Arrested_Waters {
 
         protected override void OnTriggerExit2D(Collider2D col) {
             base.OnTriggerExit2D(col);
-            player.onBoat = false;
-            Debug.Log("Left Boat");
+            if(col.name == "Player")
+            {
+                player.onBoat = false;
+                Debug.Log("Left Boat");
+            }
         }
     }
 }
