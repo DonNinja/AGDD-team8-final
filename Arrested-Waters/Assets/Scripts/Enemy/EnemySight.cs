@@ -44,8 +44,10 @@ public class EnemySight : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == watchingTarget)
+        
+        if (collision.gameObject == GameManager.instance.player.gameObject)
         {
+            
             inRange = true;
         }
     }

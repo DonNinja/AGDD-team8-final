@@ -53,7 +53,7 @@ public class Shoot : MonoBehaviour
 
     public void GetAmmo()
     {
-        if (currentAmmo > maxAmmo)
+        if (currentAmmo < maxAmmo)
         {
             currentAmmo++;
             UpdateUI();

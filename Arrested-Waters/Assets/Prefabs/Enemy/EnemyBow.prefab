@@ -116,7 +116,7 @@ MonoBehaviour:
   immuneToStagger: 0
   movmentSpeed: 1
   attackSpeed: 4
-  attackAnimationtime: 0.5
+  attackAnimationtime: 1
   attackRange: 3
   interestTime: 10
 --- !u!114 &3951605221173058056
