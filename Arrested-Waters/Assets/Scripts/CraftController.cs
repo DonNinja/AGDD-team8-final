@@ -15,6 +15,7 @@ namespace Arrested_Waters {
         [SerializeField] GameObject sail;
         [SerializeField] GameObject boat;
         [SerializeField] Sprite final_boat;
+        [SerializeField] AudioSource craft_sound;
 
         public InventoryController inventoryController;
 
@@ -77,6 +78,9 @@ namespace Arrested_Waters {
                 int available_gems = inventoryController.gem_amt;
 
                 if (available_wood >= wood_req && available_metal >= metal_req && available_gems >= gem_req) {
+                    if (craft_sound) {
+                        craft_sound.Play();
+                    }
                     // TODO: Upgrade ship
                     switch (eb.stage) {
                         case 0:
@@ -97,7 +101,7 @@ namespace Arrested_Waters {
                     inventoryController.wood_amt -= wood_req;
                     inventoryController.metal_amt -= metal_req;
                     inventoryController.gem_amt -= gem_req;
-                    
+
                     eb.IncreaseStage();
                 }
 
@@ -107,12 +111,12 @@ namespace Arrested_Waters {
 
         //protected override void OnTriggerEnter2D(Collider2D collision) {
         //    base.OnTriggerEnter2D(collision);
-            //if (boat_interaction_box.activeSelf) {
-            //    boat_interaction_box.SetActive(false);
-            //}
+        //if (boat_interaction_box.activeSelf) {
+        //    boat_interaction_box.SetActive(false);
+        //}
         //}
 
-    protected override void OnTriggerExit2D(Collider2D collision) {
+        protected override void OnTriggerExit2D(Collider2D collision) {
             base.OnTriggerExit2D(collision);
 
             if (collision.name == "InteractionCollider") {
