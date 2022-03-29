@@ -65,7 +65,6 @@ namespace Arrested_Waters {
             if (stage > 0) {
                 interaction_box.SetActive(true);
             }
-            Debug.Log("DONE: " + interaction_box.activeSelf);
         }
 
         protected override void OnTriggerEnter2D(Collider2D collision) {
