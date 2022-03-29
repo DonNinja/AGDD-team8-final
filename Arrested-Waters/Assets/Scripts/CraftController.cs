@@ -36,8 +36,8 @@ namespace Arrested_Waters {
 
         // Start is called before the first frame update
         void Start() {
-            if (GameObject.Find("Boat"))
-                eb = EnterBoat.instance;
+            //if (GameObject.Find("Boat"))
+            eb = boat.GetComponent<EnterBoat>();
 
             if (GameObject.Find("UI Canvas"))
                 inventoryController = InventoryController.instance;
@@ -97,8 +97,7 @@ namespace Arrested_Waters {
                     inventoryController.wood_amt -= wood_req;
                     inventoryController.metal_amt -= metal_req;
                     inventoryController.gem_amt -= gem_req;
-
-                    Debug.Log("UPGRADING SHIP");
+                    
                     eb.IncreaseStage();
                 }
 
