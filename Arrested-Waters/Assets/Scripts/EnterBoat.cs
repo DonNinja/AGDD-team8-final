@@ -61,8 +61,8 @@ namespace Arrested_Waters {
 
         public void IncreaseStage() {
             Debug.Log("UPGRADING SHIP");
-            instance.stage++;
-            if (instance.stage > 0) {
+            stage++;
+            if (stage > 0) {
                 interaction_box.SetActive(true);
             }
             Debug.Log("DONE: " + interaction_box.activeSelf);
@@ -70,7 +70,7 @@ namespace Arrested_Waters {
 
         protected override void OnTriggerEnter2D(Collider2D collision) {
             base.OnTriggerEnter2D(collision);
-            if (instance.stage == 0) {
+            if (stage == 0) {
                 interaction_box.SetActive(false);
             }
             if (collision.name == "Player") {
