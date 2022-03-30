@@ -30,10 +30,16 @@ namespace Arrested_Waters {
             if (letter_iterator < next_string_length) {
                 // Start the counter
                 time_counter += Time.deltaTime;
-                if (time_counter > letter_interval_ms / 1000) { // If we've reached the desired time
-                    dialogue_text.text += next_text[letter_iterator]; // Add the next letter
-                    time_counter = 0; // Reset counter
-                    letter_iterator++;
+                if (letter_interval_ms >= 0) {
+                    if (time_counter > letter_interval_ms / 1000) { // If we've reached the desired time
+                        dialogue_text.text += next_text[letter_iterator]; // Add the next letter
+                        time_counter = 0; // Reset counter
+                        letter_iterator++;
+                    }
+                } else {
+                    // If letter interval is less than 0, display whole text instantly
+                    dialogue_text.text = next_text;
+                    letter_iterator = next_string_length;
                 }
             }
         }

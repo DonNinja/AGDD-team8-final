@@ -12,7 +12,6 @@ namespace Arrested_Waters {
         [Header("Boat")]
         public CameraController boatCamera;
         public int stage = 0;
-        [SerializeField] protected GameObject upgrade_box;
 
         bool onBoat = false;
 
@@ -61,8 +60,9 @@ namespace Arrested_Waters {
         }
 
         public void IncreaseStage() {
+            Debug.Log("UPGRADING SHIP");
             stage++;
-            if (stage == 1) {
+            if (stage > 0) {
                 interaction_box.SetActive(true);
             }
         }
@@ -72,14 +72,19 @@ namespace Arrested_Waters {
             if (stage == 0) {
                 interaction_box.SetActive(false);
             }
-            player.onBoat = true;
+            if (collision.name == "Player") {
+                player.onBoat = true;
+            }
         }
 
 
         protected override void OnTriggerExit2D(Collider2D col) {
             base.OnTriggerExit2D(col);
-            player.onBoat = false;
-            Debug.Log("Left Boat");
+            if(col.name == "Player")
+            {
+                player.onBoat = false;
+                Debug.Log("Left Boat");
+            }
         }
     }
 }

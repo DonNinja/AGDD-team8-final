@@ -1,7 +1,76 @@
 fileFormatVersion: 2
 guid: 0c9f7fc2bf70db1468bf09edfe332cfe
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5014493825000902813
+    second: RuinsAssets_0
+  - first:
+      213: -5218460653460247998
+    second: RuinsAssets_1
+  - first:
+      213: 4154634287370035933
+    second: RuinsAssets_2
+  - first:
+      213: -7556597571626743065
+    second: RuinsAssets_3
+  - first:
+      213: 7821059140340012931
+    second: RuinsAssets_4
+  - first:
+      213: -7014266246516902
+    second: RuinsAssets_5
+  - first:
+      213: -8429196417026113365
+    second: RuinsAssets_6
+  - first:
+      213: 6362453346947984258
+    second: RuinsAssets_7
+  - first:
+      213: 5045974035435612816
+    second: RuinsAssets_8
+  - first:
+      213: -6223688381267132270
+    second: RuinsAssets_9
+  - first:
+      213: -8981549049412400792
+    second: RuinsAssets_10
+  - first:
+      213: 7465947123408287932
+    second: RuinsAssets_11
+  - first:
+      213: -6001924409170806180
+    second: RuinsAssets_12
+  - first:
+      213: 3338879328986921020
+    second: RuinsAssets_13
+  - first:
+      213: -3305998765558050151
+    second: RuinsAssets_14
+  - first:
+      213: -348999524990834462
+    second: RuinsAssets_15
+  - first:
+      213: -3880316869610811192
+    second: RuinsAssets_16
+  - first:
+      213: -3827918515833824506
+    second: RuinsAssets_17
+  - first:
+      213: -3739760052459063702
+    second: RuinsAssets_18
+  - first:
+      213: -475064769812851307
+    second: RuinsAssets_19
+  - first:
+      213: -4075853649612010182
+    second: RuinsAssets_20
+  - first:
+      213: -5671876898687272445
+    second: RuinsAssets_21
+  - first:
+      213: 8087140322801022165
+    second: RuinsAssets_22
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +110,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +144,516 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: RuinsAssets_0
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1036
+        width: 108
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90919fd09f079540800000000000000
+      internalID: 5014493825000902813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_1
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1058
+        width: 162
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a262c2fad4497b0800000000000000
+      internalID: -5218460653460247998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_2
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 951
+        width: 287
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd269564fd938a930800000000000000
+      internalID: 4154634287370035933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_3
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 736
+        width: 204
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eacb909b82912790800000000000000
+      internalID: -7556597571626743065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_4
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 859
+        width: 131
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387d943b9dbf98c60800000000000000
+      internalID: 7821059140340012931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_5
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 766
+        width: 103
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f2400ef8417eff0800000000000000
+      internalID: -7014266246516902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_6
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 820
+        width: 103
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0c92db48a750b80800000000000000
+      internalID: -8429196417026113365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_7
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 837
+        width: 45
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b64dcfb99fb4850800000000000000
+      internalID: 6362453346947984258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_8
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 837
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09aebf786a6e60640800000000000000
+      internalID: 5045974035435612816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_9
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 752
+        width: 311
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290c8d9446401a9a0800000000000000
+      internalID: -6223688381267132270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_10
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 509
+        width: 100
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869c601d9b02b5380800000000000000
+      internalID: -8981549049412400792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_11
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 677
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8b99a3a5f5c9760800000000000000
+      internalID: 7465947123408287932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_12
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 636
+        width: 285
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ab0a6ac81e4bca0800000000000000
+      internalID: -6001924409170806180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_13
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 535
+        width: 104
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38f8204f05165e20800000000000000
+      internalID: 3338879328986921020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_14
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 588
+        width: 54
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992580f73abbe12d0800000000000000
+      internalID: -3305998765558050151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_15
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 562
+        width: 173
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e82426f7ca182bf0800000000000000
+      internalID: -348999524990834462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_16
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 521
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c054eaad58562ac0800000000000000
+      internalID: -3880316869610811192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_17
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 163
+        width: 243
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b959a146080eac0800000000000000
+      internalID: -3827918515833824506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_18
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 385
+        width: 389
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a663bffdb04b91cc0800000000000000
+      internalID: -3739760052459063702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_19
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 246
+        width: 87
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595900edb1b3869f0800000000000000
+      internalID: -475064769812851307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_20
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 214
+        width: 153
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d856253b8af67c0800000000000000
+      internalID: -4075853649612010182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_21
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 277
+        width: 297
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a3004f2027941b0800000000000000
+      internalID: -5671876898687272445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsAssets_22
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 174
+        width: 278
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4fa4da64b4b3070800000000000000
+      internalID: 8087140322801022165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -8,6 +8,7 @@ public class WeaponSwing : MonoBehaviour
     public GameObject weaponSwingFX2;
     public Transform spawnLocation;
     public GameObject gun;
+    [SerializeField] AudioSource weaponSwingAudioSource;
     private Animator anim;
     private GameObject hitBox;
     private PlayerController player;
@@ -42,7 +43,7 @@ public class WeaponSwing : MonoBehaviour
     {
         hitBox.SetActive(true);
     }
-    public void DeactiavteTrigger()
+    public void DeactivateTrigger()
     {
         hitBox.SetActive(false);
     }
@@ -71,5 +72,9 @@ public class WeaponSwing : MonoBehaviour
         swing.transform.GetChild(0).localScale = (player.transform.localScale) / 2;
         swing.transform.localScale = new Vector3(swing.transform.localScale.x*-1, swing.transform.localScale.y, swing.transform.localScale.z);
         swing.transform.GetChild(0).localScale = new Vector3(swing.transform.localScale.x, swing.transform.localScale.y, swing.transform.localScale.z);
+    }
+
+    public void PlaySwingSound() {
+        weaponSwingAudioSource.Play();
     }
 }

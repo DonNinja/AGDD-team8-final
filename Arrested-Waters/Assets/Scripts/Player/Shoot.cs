@@ -13,6 +13,7 @@ public class Shoot : MonoBehaviour
     public Transform gunPoint;
     public GameObject[] ammoUIslot;
     public bool canShoot = true;
+    [SerializeField] AudioSource weaponShotAudioSource;
 
     private void Start()
     {
@@ -34,6 +35,7 @@ public class Shoot : MonoBehaviour
     void ShootNow()
     {
         GameObject fx = Instantiate(shootFX, gunPoint.transform.position, transform.rotation);
+        weaponShotAudioSource.Play();
         fx.transform.localScale = player.transform.localScale;
         currentAmmo -= 1;
         UpdateUI();

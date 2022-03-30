@@ -72,6 +72,8 @@ public class BoatController : MonoBehaviour
 
     public bool debug = false;
 
+    public AudioSource waves_breaking_sfx;
+
     public void updateControls()
     {
         key_throttle = InputController.key_throttle;
@@ -240,7 +242,10 @@ public class BoatController : MonoBehaviour
         rearAxle.leftTire.grip = rearGrip * (1.0f - eBrake * (1.0f - eBrakeGripRatioRear));
         rearAxle.rightTire.grip = rearGrip * (1.0f - eBrake * (1.0f - eBrakeGripRatioRear));
 
-        if(speedKPH > lowSpeedWiggleCorr)
+
+        waves_breaking_sfx.volume = Mathf.Clamp(speedKPH / 10, 0, 1);
+
+        if (speedKPH > lowSpeedWiggleCorr)
         {
             frontAxle.leftTire.friction = Mathf.Clamp(-cornerStiffFront * frontAxle.slipAngle, -frontAxle.leftTire.grip, frontAxle.leftTire.grip) * frontAxle.leftTire.activeWeight;
             frontAxle.rightTire.friction = Mathf.Clamp(-cornerStiffFront * frontAxle.slipAngle, -frontAxle.rightTire.grip, frontAxle.rightTire.grip) * frontAxle.rightTire.activeWeight;
