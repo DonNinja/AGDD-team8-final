@@ -12,6 +12,8 @@ public class PlayerStats : MonoBehaviour
 
     public bool defeated;
 
+    [SerializeField] AudioSource hurt_audio;
+
     public void Start()
     {
 
@@ -30,7 +32,8 @@ public class PlayerStats : MonoBehaviour
         if (imunity <= 0)
         {
             imunity = 1;
-            
+
+            hurt_audio.Play();
 
             currentHealth -= dmg;
 
