@@ -54,9 +54,9 @@ public class PlayerController : MonoBehaviour
         {
             newMovement = rb.position + movement.normalized * moveSpeed / 2 * Time.fixedDeltaTime;
             if (onBoat)
-                newMovement += new Vector2(boat.transform.position.x, boat.transform.position.y);
+                newMovement += new Vector2(boat.GetComponent<Rigidbody2D>().velocity.x, boat.GetComponent<Rigidbody2D>().velocity.y) * Time.fixedDeltaTime;
             rb.MovePosition(newMovement);
-            AimGun();
+            //AimGun();
         }
         // Set values for the animation.
         //animator.SetFloat("Horizontal", movement.x);
