@@ -15,7 +15,12 @@ public class Scene_Controller : MonoBehaviour
         SceneManager.LoadScene("StoryIntro");
     }
 
-    public void MainMenu()
+    public void ToEndGame()
+    {
+        SceneManager.LoadScene("EndGame");
+    }
+
+    public void ToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
