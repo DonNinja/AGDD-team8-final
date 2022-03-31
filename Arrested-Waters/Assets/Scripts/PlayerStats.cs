@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
     public int maxHealth = 100;
     public float currentHealth;
     private float imunity;
-    public float regenerate = 0.1f;
+    public float regenerate = 0.5f;
     public HealthBar healthBar;
 
     public bool defeated;
@@ -49,6 +49,15 @@ public class PlayerStats : MonoBehaviour
                 //GameManager.instance.Defeat();
             }
         }
+    }
+
+    public void StartBurn(float damage)
+    {
+        regenerate = -1 * damage;
+    }
+    public void StopBurn()
+    {
+        regenerate = 0.5f;
     }
 
 }
