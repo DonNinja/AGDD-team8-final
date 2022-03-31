@@ -30,6 +30,6 @@ public class EnemyAttack : MonoBehaviour
     }
     public void SpawnEffect2()
     {
-        GameObject swing = Instantiate(weaponSwingFX, spawnLocation.position, spawnLocation.parent.rotation);
+        GameObject swing = Instantiate(weaponSwingFX2, spawnLocation.position, spawnLocation.parent.rotation);
     }
 }
