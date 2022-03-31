@@ -109,12 +109,10 @@ namespace Arrested_Waters {
             }
         }
 
-        //protected override void OnTriggerEnter2D(Collider2D collision) {
-        //    base.OnTriggerEnter2D(collision);
-        //if (boat_interaction_box.activeSelf) {
-        //    boat_interaction_box.SetActive(false);
-        //}
-        //}
+        protected override void OnTriggerEnter2D(Collider2D collision) {
+            base.OnTriggerEnter2D(collision);
+            // TODO: Check if has enter_boat script
+        }
 
         protected override void OnTriggerExit2D(Collider2D collision) {
             base.OnTriggerExit2D(collision);

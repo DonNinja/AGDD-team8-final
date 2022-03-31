@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1652902380845778516, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1652902380845778517, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 10.35
@@ -61,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1652902380845778518, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
       propertyPath: m_Name
-      value: Boat (1)
+      value: Boat (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1652902380845778519, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
       propertyPath: m_Sprite
