@@ -46,8 +46,10 @@ MonoBehaviour:
   wood_text: {fileID: 0}
   metal_text: {fileID: 0}
   gem_text: {fileID: 0}
+  gold_text: {fileID: 0}
   add_text: {fileID: 0}
   anim: {fileID: 0}
   wood_amt: 0
   metal_amt: 0
   gem_amt: 0
+  gold_amt: 0
