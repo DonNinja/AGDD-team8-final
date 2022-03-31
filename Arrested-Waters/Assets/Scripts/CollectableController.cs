@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollectableController : MonoBehaviour {
     InventoryController inv_cont;
-    public enum Material { Wood, Metal, Gems };
+    public enum Material { Wood, Metal, Gems, Gold };
     public string player_name;
 
     [SerializeField] LayerMask wall;
