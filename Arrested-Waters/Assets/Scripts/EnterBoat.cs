@@ -6,7 +6,7 @@ namespace Arrested_Waters {
     public class EnterBoat : InteractableScript {
         public static EnterBoat instance;
 
-        BoatController boat;
+        public BoatController boat;
         PlayerController player;
 
         [Header("Boat")]
@@ -22,7 +22,6 @@ namespace Arrested_Waters {
         }
 
         private void Start() {
-            boat = GameManager.instance.boat;
             player = GameManager.instance.player;
         }
 
@@ -44,6 +43,7 @@ namespace Arrested_Waters {
         public void EnterBoatFunc() {
             Debug.Log("Enter");
             GameManager.instance.mainCamera.target = boat.transform;
+            player.boat = boat;
             boat.enabled = true;
             boatCamera.enabled = true;
             player.onBoat = true;
