@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   what_do: Speak
-  interaction_box: {fileID: 1432117320219677711}
-  interaction_text: {fileID: 1432117319731452097}
+  interaction_box: {fileID: 0}
+  interaction_text: {fileID: 0}
   main_dialogue:
   - main 1
   - main 2
@@ -272,22 +272,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8434766120987434071, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
   m_PrefabInstance: {fileID: 7408887598734565816}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1432117320219677711 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8434766121629791671, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
-  m_PrefabInstance: {fileID: 7408887598734565816}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1432117319731452097 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8434766121040214393, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
-  m_PrefabInstance: {fileID: 7408887598734565816}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1432117320221118055 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8434766121628348383, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
