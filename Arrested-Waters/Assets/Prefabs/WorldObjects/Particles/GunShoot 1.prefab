@@ -4844,7 +4844,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -427404221
-  m_SortingLayer: 8
+  m_SortingLayer: -6
   m_SortingOrder: 3
   m_RenderMode: 0
   m_SortMode: 0
@@ -4946,7 +4946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88e7cfe4e60f1c4698057f92703aa27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 30
+  power: 80
   isEnemy: 0
   blood: {fileID: 7901248356177016559, guid: b80fdceef44d19b40adb375aa14e47f5, type: 3}
   gun: {fileID: 0}
@@ -9790,7 +9790,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -427404221
-  m_SortingLayer: 8
+  m_SortingLayer: -6
   m_SortingOrder: 3
   m_RenderMode: 0
   m_SortMode: 0

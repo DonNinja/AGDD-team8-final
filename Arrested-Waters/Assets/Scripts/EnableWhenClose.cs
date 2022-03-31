@@ -13,6 +13,7 @@ public class EnableWhenClose : MonoBehaviour
         {
             thingToEnable.SetActive(true);
         }
+        Debug.Log(collision.gameObject);
     }
     public void OnTriggerExit2D(Collider2D collision)
     {

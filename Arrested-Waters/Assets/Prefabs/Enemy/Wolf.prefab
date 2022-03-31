@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -838496533
-  m_SortingLayer: -6
+  m_SortingLayer: -5
   m_SortingOrder: 2
   m_Sprite: {fileID: -8966301255875288918, guid: ea19a08843d667047ac6cf35ffa8a4b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -363,7 +363,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 787342701345684489, guid: b4c0bb91eabec464dacc44d973c0a4ee, type: 3}
       propertyPath: m_SortingLayer
-      value: -6
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 787342701345684489, guid: b4c0bb91eabec464dacc44d973c0a4ee, type: 3}
       propertyPath: m_SortingOrder
@@ -491,6 +491,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 20
-  isEnemy: 0
+  isEnemy: 1
   blood: {fileID: 7901248356177016559, guid: b80fdceef44d19b40adb375aa14e47f5, type: 3}
   gun: {fileID: 0}
