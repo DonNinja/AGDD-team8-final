@@ -50,8 +50,8 @@ public class EnemyAI : MonoBehaviour
     {
         interestTimer = 0;
         aggro = true;
-        //if (!audioSource.isPlaying)
-            //audioSource.PlayOneShot(monsterSound);
+        if (monsterSound != null && !audioSource.isPlaying)
+            audioSource.PlayOneShot(monsterSound);
     }
     public void LosePlayer()
     {

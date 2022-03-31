@@ -10,3 +10,5 @@ Audio:
 	Gun shot - Original by Marre unt Nybbe
 	Swing sound - Original by InspectorJ
 	The Northern Path (Background Music) - Alexander Nakarada
+	Whale Sound Baleines.wav - by davidou
+	wolf-growl - by newagesoup
