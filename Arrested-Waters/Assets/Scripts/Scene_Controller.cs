@@ -10,6 +10,11 @@ public class Scene_Controller : MonoBehaviour
         SceneManager.LoadScene("MapCreation");
     }
 
+    public void ToIntro()
+    {
+        SceneManager.LoadScene("StoryIntro");
+    }
+
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
