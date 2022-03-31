@@ -11,6 +11,10 @@ namespace Arrested_Waters {
         [SerializeField] protected GameObject interaction_box;
         [SerializeField] protected TextMeshProUGUI interaction_text;
 
+        protected virtual void Start() {
+            interaction_box = GameObject.Find("");
+        }
+
         // Update is called once per frame
         protected virtual void Update() {
             if (interaction_box.activeSelf) {

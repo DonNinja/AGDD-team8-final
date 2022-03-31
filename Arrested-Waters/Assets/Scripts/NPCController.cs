@@ -21,7 +21,8 @@ namespace Arrested_Waters {
         int next_string_length = 0;
         string next_text = "";
 
-        private void Start() {
+        protected override void Start() {
+            base.Start();
             dialogue_text.text = "";
         }
 
