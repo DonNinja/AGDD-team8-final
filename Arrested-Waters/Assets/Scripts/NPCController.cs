@@ -20,6 +20,7 @@ namespace Arrested_Waters {
         int letter_iterator = 0;
         int next_string_length = 0;
         string next_text = "";
+        bool is_talking = false;
 
         protected void Start() {
             dialogue_text.text = "";
@@ -36,7 +37,8 @@ namespace Arrested_Waters {
                         time_counter = 0; // Reset counter
                         letter_iterator++;
                     }
-                } else {
+                }
+                else {
                     // If letter interval is less than 0, display whole text instantly
                     dialogue_text.text = next_text;
                     letter_iterator = next_string_length;
@@ -45,31 +47,41 @@ namespace Arrested_Waters {
         }
 
         protected override void Interact() {
-            // Start by iterating through main dialogue
-            if (main_dialogue.Count > 0) {
-                next_text = main_dialogue[0];
-                main_dialogue.RemoveAt(0);
-            }
-            // Then iterate and repeat repeating dialogue
-            else {
-                if (repeat_iterator == repeating_dialogue.Count) {
-                    repeat_iterator = 0;
+            if (is_talking) {
+                // Start by iterating through main dialogue
+                if (main_dialogue.Count > 0) {
+                    next_text = main_dialogue[0];
+                    main_dialogue.RemoveAt(0);
                 }
-                next_text = repeating_dialogue[repeat_iterator];
-                repeat_iterator++;
-            }
+                // Then iterate and repeat repeating dialogue
+                else {
+                    if (repeat_iterator == repeating_dialogue.Count) {
+                        repeat_iterator = 0;
+                    }
+                    next_text = repeating_dialogue[repeat_iterator];
+                    repeat_iterator++;
+                }
 
-            // Set everything to be ready to display
-            dialogue_text.text = "";
-            next_string_length = next_text.Length;
-            letter_iterator = 0;
+                // Set everything to be ready to display
+                dialogue_text.text = "";
+                next_string_length = next_text.Length;
+                letter_iterator = 0;
+            }
         }
 
         protected override void OnTriggerExit2D(Collider2D collision) {
-            if (collision.name == "InteractionCollider") {
+            if (collision.name == "InteractionCollider" && is_talking) {
                 base.OnTriggerExit2D(collision);
                 dialogue_text.text = ""; // Empty dialogue text
                 next_text = ""; // Reset next text
+                is_talking = false;
+            }
+        }
+
+        protected override void OnTriggerEnter2D(Collider2D collision) {
+            base.OnTriggerEnter2D(collision);
+            if (collision.name == "InteractionCollider" && !is_talking) {
+                is_talking = true;
             }
         }
     }
