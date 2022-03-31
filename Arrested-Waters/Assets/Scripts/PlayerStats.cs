@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public int maxHealth = 100;
-    public int currentHealth;
+    public float currentHealth;
     private float imunity;
-
+    public float regenerate = 0.5f;
     public HealthBar healthBar;
 
     public bool defeated;
@@ -24,11 +24,13 @@ public class PlayerStats : MonoBehaviour
     public void Update()
     {
         imunity -= Time.deltaTime;
+        if (currentHealth < maxHealth)
+            currentHealth += (regenerate * Time.deltaTime);
+        healthBar.SetHealth(currentHealth);
     }
 
     public void TakeDamage(int dmg)
     {
-
         if (imunity <= 0)
         {
             imunity = 1;
@@ -48,4 +50,14 @@ public class PlayerStats : MonoBehaviour
             }
         }
     }
+
+    public void StartBurn(float damage)
+    {
+        regenerate = -1 * damage;
+    }
+    public void StopBurn()
+    {
+        regenerate = 0.5f;
+    }
+
 }

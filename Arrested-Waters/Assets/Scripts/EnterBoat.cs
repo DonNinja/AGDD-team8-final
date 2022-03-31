@@ -14,7 +14,7 @@ namespace Arrested_Waters {
         public int stage = 0;
 
         bool onBoat = false;
-
+        bool entering_boat = false;
         private void Awake() {
             if (!instance) {
                 instance = this;
@@ -33,10 +33,12 @@ namespace Arrested_Waters {
         }
 
         protected override void Interact() {
-            if (!onBoat)
-                EnterBoatFunc();
-            else
-                ExitBoatFunc();
+            if (entering_boat) {
+                if (!onBoat)
+                    EnterBoatFunc();
+                else
+                    ExitBoatFunc();
+            }
         }
 
         public void EnterBoatFunc() {
@@ -72,6 +74,7 @@ namespace Arrested_Waters {
             if (stage == 0) {
                 interaction_box.SetActive(false);
             }
+            entering_boat = true;
             if (collision.name == "Player") {
                 player.onBoat = true;
             }
@@ -80,8 +83,8 @@ namespace Arrested_Waters {
 
         protected override void OnTriggerExit2D(Collider2D col) {
             base.OnTriggerExit2D(col);
-            if(col.name == "Player")
-            {
+            entering_boat = false;
+            if (col.name == "Player") {
                 player.onBoat = false;
                 Debug.Log("Left Boat");
             }

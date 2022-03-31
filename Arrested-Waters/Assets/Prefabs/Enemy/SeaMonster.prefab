@@ -396,6 +396,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonsterEye
       objectReference: {fileID: 0}
+    - target: {fileID: 4497765543027654484, guid: 4710379b9fe45384ca57e41b3eb9d6ab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5177272647460863456, guid: 4710379b9fe45384ca57e41b3eb9d6ab, type: 3}
       propertyPath: m_RootOrder
       value: 3
