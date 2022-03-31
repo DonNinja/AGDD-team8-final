@@ -24,7 +24,7 @@ public class PlayerStats : MonoBehaviour
     public void Update()
     {
         imunity -= Time.deltaTime;
-        if (currentHealth < maxHealth)
+        if (currentHealth < maxHealth || regenerate < 0)
             currentHealth += (regenerate * Time.deltaTime);
         healthBar.SetHealth(currentHealth);
     }
