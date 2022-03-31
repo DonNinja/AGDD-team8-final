@@ -43,7 +43,7 @@ public class CollectableController : MonoBehaviour {
 
         // Check if:
         //      1. the player is within range,
-        //      2. it hasn't been picked up yes (to prevent it getting picked up twice)
+        //      2. it hasn't been picked up (to prevent it getting picked up twice)
         //      3. that the item has a direct line to the player
         if (other.name == player_name && !is_picked_up && HasDirectLine(gameObject.transform, other.transform)) {
             // Float toward the player
