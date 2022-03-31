@@ -791,6 +791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  regenerate: 0.5
   healthBar: {fileID: 0}
   defeated: 0
   hurt_audio: {fileID: 6770176255805499864}
