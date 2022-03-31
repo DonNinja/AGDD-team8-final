@@ -25,7 +25,7 @@ namespace Arrested_Waters {
         }
 
         protected virtual void OnTriggerEnter2D(Collider2D collision) {
-            if (collision.name == "InteractionCollider") {
+            if (!interaction_box.activeSelf && collision.name == "InteractionCollider") {
                 interaction_box.SetActive(true); // Show the interaction box
                 interaction_text.text = what_do;
             }

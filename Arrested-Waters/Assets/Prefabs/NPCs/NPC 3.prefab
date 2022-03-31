@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1432117318424367100}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NPC 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3705237999270515793}
   - component: {fileID: 2301390740089873906}
   - component: {fileID: 4528774791290148347}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NPC Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,6 +177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8434766120987434070, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8434766120987434071, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -264,6 +268,18 @@ PrefabInstance:
     - target: {fileID: 8434766120987434073, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434766121040214391, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434766121628348381, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434766121629791671, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 378c636a5c3156b4288cae55eb59634c, type: 3}
