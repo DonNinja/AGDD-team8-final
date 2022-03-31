@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -838496533
-  m_SortingLayer: -6
+  m_SortingLayer: -5
   m_SortingOrder: 5
   m_Sprite: {fileID: 3296816500878435913, guid: ea19a08843d667047ac6cf35ffa8a4b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -170,7 +170,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 60
+  m_Radius: 20.34
 --- !u!114 &3951605221173058103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +363,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 787342701345684489, guid: 206afd3f191fc7046812704f0e0caafb, type: 3}
       propertyPath: m_SortingLayer
-      value: -6
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 787342701345684489, guid: 206afd3f191fc7046812704f0e0caafb, type: 3}
       propertyPath: m_SortingLayerID
@@ -510,6 +510,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 50
-  isEnemy: 0
+  isEnemy: 1
   blood: {fileID: 7901248356177016559, guid: b80fdceef44d19b40adb375aa14e47f5, type: 3}
   gun: {fileID: 0}
