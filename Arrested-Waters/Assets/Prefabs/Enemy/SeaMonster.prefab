@@ -84,7 +84,7 @@ MonoBehaviour:
   ai: {fileID: 0}
   IgnoreMask:
     serializedVersion: 2
-    m_Bits: 3848
+    m_Bits: 12040
   visionDirection: {fileID: 3951605221254523338}
   hearingDistance: 1
   sightRadius: 45
