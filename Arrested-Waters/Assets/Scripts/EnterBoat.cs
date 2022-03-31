@@ -74,7 +74,8 @@ namespace Arrested_Waters {
             if (stage == 0) {
                 interaction_box.SetActive(false);
             }
-            entering_boat = true;
+            if (collision.name == "InteractionCollider")
+                entering_boat = true;
             if (collision.name == "Player") {
                 player.onBoat = true;
             }
@@ -83,7 +84,8 @@ namespace Arrested_Waters {
 
         protected override void OnTriggerExit2D(Collider2D col) {
             base.OnTriggerExit2D(col);
-            entering_boat = false;
+            if (col.name == "InteractionCollider")
+                entering_boat = false;
             if (col.name == "Player") {
                 player.onBoat = false;
                 Debug.Log("Left Boat");
