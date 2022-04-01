@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 namespace Arrested_Waters
 {
@@ -8,44 +10,59 @@ namespace Arrested_Waters
     public class DeathController : MonoBehaviour
     {
         public Collider2D MapBounds;
-        public EnterBoat boat;
-        public PlayerController player;
+        public PlayerController Player;
 
-        private Vector3 boatInitPos;
-        private Vector3 playerInitPos;
+        public GameObject RespawnPos;
+        public GameObject BoatRespawnPos;
+        public EnterBoat EscapeBoat;
+        private Collider2D EscapeBoatCollider;
+
+        public TextMeshProUGUI CannotEscapeNotif;
+
+        private Vector3 BoatInitPos;
+        private Vector3 PlayerInitPos;
 
         private void Start()
         {
-            boatInitPos = boat.transform.position;
-            playerInitPos = player.transform.position;
+            CannotEscapeNotif.gameObject.SetActive(false);
+            EscapeBoatCollider = EscapeBoat.gameObject.GetComponent<Collider2D>();
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (GameManager.instance.isDead)
             {
-                boat.transform.position = boatInitPos;
-                player.transform.position = playerInitPos;
-                boat.ExitBoatFunc();
+                GameManager.instance.OnDeath();
             }
         }
 
-        private void OnTriggerExit2D(Collider2D collision)
+        private void Respawn()
         {
-            if (collision = MapBounds)
+            GameManager.instance.boat.transform.position = BoatRespawnPos.transform.position;
+            Player.transform.position = RespawnPos.transform.position;
+            //GameManager.instance.boat.gameObject.GetComponent<EnterBoat>().ExitBoatFunc();
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision == EscapeBoatCollider && EscapeBoat.stage == 2)
             {
-                if (boat.stage == 2)
-                {
-                    Application.Quit();
-                    //GameManager.instance.EndGame();
-                }
-                else
-                {
-                    boat.transform.position = boatInitPos;
-                    player.transform.position = playerInitPos;
-                    boat.ExitBoatFunc();
-                }
+                GameManager.instance.EndGame();
             }
+            else
+            {
+                Respawn();
+                StartCoroutine(Notification());
+            }
+        }
+
+        private IEnumerator Notification()
+        {
+            CannotEscapeNotif.gameObject.SetActive(true);
+
+            yield return new WaitForSeconds(8);
+
+            CannotEscapeNotif.gameObject.SetActive(false);
         }
     }
 }

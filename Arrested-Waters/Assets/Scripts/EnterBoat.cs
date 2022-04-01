@@ -44,6 +44,7 @@ namespace Arrested_Waters {
             Debug.Log("Enter");
             GameManager.instance.mainCamera.target = boat.transform;
             player.boat = boat;
+            GameManager.instance.SetBoat(boat);
             boat.enabled = true;
             boatCamera.enabled = true;
             player.onBoat = true;

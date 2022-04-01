@@ -20,11 +20,11 @@ TagManager:
   - Enemy
   - Resources
   - Interaction
-  - MapBounds
+  - 
   - Wall
   - IslandTrigger
   - Lava
-  - 
+  - MapBounds
   - 
   - 
   - 
