@@ -373,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4166549454002365821
 Transform:
   m_ObjectHideFlags: 0
@@ -492,7 +492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &764346838281951096
 Transform:
   m_ObjectHideFlags: 0
@@ -520,8 +520,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.030200237, y: 0.2818532}
-  m_Size: {x: 0.93437076, y: 2.5870225}
+  m_Offset: {x: -0.008018177, y: -0.045473848}
+  m_Size: {x: 1.2292571, y: 3.2416847}
   m_Direction: 0
 --- !u!114 &4761809205843803745
 MonoBehaviour:
