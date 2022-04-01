@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  health: 2000
+  health: 300
   aggro: 0
   player: {fileID: 0}
   attack: {fileID: 3603836104635911402}
