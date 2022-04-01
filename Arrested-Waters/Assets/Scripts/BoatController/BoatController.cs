@@ -147,15 +147,15 @@ public class BoatController : MonoBehaviour
             steerAngle = Mathf.Clamp(steerAngle, -maxSteeringAngle * Mathf.Deg2Rad, maxSteeringAngle * Mathf.Deg2Rad);
         }
 
-        if (Input.GetKey(key_throttle) || Input.GetMouseButton(mouse_throttle))
+        if (Input.GetKey(key_throttle))
         {
             throttle = 1;
         }
-        if (Input.GetKey(key_brake) || Input.GetMouseButton(mouse_brake))
+        if (Input.GetKey(key_brake))
         {
             throttle = -1;
         }
-        if (Input.GetKey(key_ebrake) || Input.GetMouseButton(mouse_ebrake))
+        if (Input.GetKey(key_ebrake))
         {
             eBrake = 1;
         }
