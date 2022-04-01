@@ -14,10 +14,12 @@ namespace Arrested_Waters
 
         public GameObject RespawnPos;
         public GameObject BoatRespawnPos;
+        public Collider2D StarterBoat;
         public EnterBoat EscapeBoat;
         private Collider2D EscapeBoatCollider;
 
         public TextMeshProUGUI CannotEscapeNotif;
+        public TextMeshProUGUI BiggerBoatNotif;
 
         private Vector3 BoatInitPos;
         private Vector3 PlayerInitPos;
@@ -25,6 +27,7 @@ namespace Arrested_Waters
         private void Start()
         {
             CannotEscapeNotif.gameObject.SetActive(false);
+            BiggerBoatNotif.gameObject.SetActive(false);
             EscapeBoatCollider = EscapeBoat.gameObject.GetComponent<Collider2D>();
         }
 
@@ -49,20 +52,31 @@ namespace Arrested_Waters
             {
                 GameManager.instance.EndGame();
             }
+            else if(collision == StarterBoat)
+            {
+                Respawn();
+                StartCoroutine(Notification(true));
+            }
             else
             {
                 Respawn();
-                StartCoroutine(Notification());
+                StartCoroutine(Notification(false));
             }
         }
 
-        private IEnumerator Notification()
+        private IEnumerator Notification(bool needsBiggerBoat)
         {
             CannotEscapeNotif.gameObject.SetActive(true);
+            if (needsBiggerBoat)
+            {
+                BiggerBoatNotif.gameObject.SetActive(true);
+            }
 
             yield return new WaitForSeconds(8);
 
             CannotEscapeNotif.gameObject.SetActive(false);
+            BiggerBoatNotif.gameObject.SetActive(false);
+
         }
     }
 }
