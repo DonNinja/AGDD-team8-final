@@ -60,8 +60,6 @@ namespace Arrested_Waters {
 
             if (GameObject.Find("UI Canvas"))
                 inventoryController = InventoryController.instance;
-
-            Debug.Log(upgrade_costs.Count);
         }
 
         protected override void Update() {
