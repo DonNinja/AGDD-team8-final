@@ -9697,7 +9697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88e7cfe4e60f1c4698057f92703aa27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 50
+  power: 75
   isEnemy: 1
   blood: {fileID: 7901248356177016559, guid: b80fdceef44d19b40adb375aa14e47f5, type: 3}
   gun: {fileID: 0}
