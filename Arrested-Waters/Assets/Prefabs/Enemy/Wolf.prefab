@@ -114,6 +114,7 @@ MonoBehaviour:
   monsterSound: {fileID: 8300000, guid: e6c8a0b8d147b3c46bc9f77bc6264ecb, type: 3}
   audioSource: {fileID: 0}
   attackWalkSpeed: 4
+  drop: {fileID: 8443363470807587715, guid: 6da6596050342fc4f8e2654b47207f37, type: 3}
   immuneToStagger: 0
   movmentSpeed: 4
   attackSpeed: 1.5
