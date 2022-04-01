@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
     public AudioClip monsterSound;
     public AudioSource audioSource;
     public float attackWalkSpeed;
+    public GameObject drop;
 
     public bool immuneToStagger = false;
     public float movmentSpeed = 6;
@@ -135,5 +136,6 @@ public class EnemyAI : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
+        Instantiate(drop, transform.position, transform.rotation);
     }
 }

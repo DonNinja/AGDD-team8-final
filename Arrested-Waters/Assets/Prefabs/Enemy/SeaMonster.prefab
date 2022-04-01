@@ -57,13 +57,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  health: 2000
+  health: 300
   aggro: 0
   player: {fileID: 0}
   attack: {fileID: 3603836104635911402}
   monsterSound: {fileID: 8300000, guid: c19ec3cdc9f4a0d49a372e0e877d5cfd, type: 3}
   audioSource: {fileID: 0}
   attackWalkSpeed: 0.6
+  drop: {fileID: 8443363470807587715, guid: 6da6596050342fc4f8e2654b47207f37, type: 3}
   immuneToStagger: 1
   movmentSpeed: 1
   attackSpeed: 4
@@ -105,7 +106,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.82
+  m_Radius: 360
 --- !u!58 &3951605221173058062
 CircleCollider2D:
   m_ObjectHideFlags: 0

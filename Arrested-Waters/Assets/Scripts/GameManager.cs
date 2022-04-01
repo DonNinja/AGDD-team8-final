@@ -33,6 +33,11 @@ public class GameManager : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera").GetComponent<CameraFollowTarget>();
     }
 
+    public void SetBoat(BoatController newBoat)
+    {
+        boat = newBoat;
+    }
+
     public void OnDeath()
     {
         SceneManager.LoadScene("MapCreation");
@@ -42,4 +47,5 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("EndGame");
     }
+
 }
