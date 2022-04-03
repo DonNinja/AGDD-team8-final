@@ -1,0 +1,44 @@
+Greta:
+	Change font + buttons into something more pretty
+
+	Having weapon makes no sense (Use it as a pickup?)
+
+	Adding some compliment dialogue
+
+	Add more humour to the dialogue which
+
+	Shift to speed up the character
+
+	Adding shortcut to finish game (a button or something)
+
+	Add some weird lore to the game
+
+	Make a satisfying ending
+
+Erla:
+	Enemies look good
+
+	Add indicator where person is on map (X on starting island)
+	
+	Bullets not obvious
+	
+	Add a sprint function
+	
+	Not obvious that there are multiple dialogues
+
+Lóa:
+	Bullets not obvious
+	
+	Unintuitive pressing the same button twice for upgrade
+	
+	Increase amount of iron required for upgrade boat 1
+	
+	Hard to differentiate between interact button and background
+	
+	Make more obvious that there are more dialogues for NPC
+	
+	Ammo gathering not very intuitive
+	
+	Excited about exploring
+	
+	Add ship to map for scale
