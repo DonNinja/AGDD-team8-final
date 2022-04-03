@@ -119,7 +119,7 @@ MonoBehaviour:
   movmentSpeed: 4
   attackSpeed: 1.5
   attackAnimationtime: 1.05
-  attackRange: 0.8
+  attackRange: 0.9
   interestTime: 10
 --- !u!114 &3951605221173058056
 MonoBehaviour:
@@ -172,7 +172,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 27.2
+  m_Radius: 40
 --- !u!114 &3951605221173058103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0
   pickNextWaypointDist: 0.2
-  endReachedDistance: 0.48
+  endReachedDistance: 0.58
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
