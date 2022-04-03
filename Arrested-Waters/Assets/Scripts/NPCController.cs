@@ -17,10 +17,10 @@ namespace Arrested_Waters {
 
         float time_counter;
         int repeat_iterator = 0;
-        int letter_iterator = 0;
+        public int letter_iterator = 0;
         int next_string_length = 0;
         string next_text = "";
-        bool is_talking = false;
+        bool done_talking = false;
 
         protected void Start() {
             dialogue_text.text = "";
@@ -34,7 +34,7 @@ namespace Arrested_Waters {
                 if (letter_interval_ms >= 0) {
                     if (time_counter > letter_interval_ms / 1000) { // If we've reached the desired time
                         dialogue_text.text += next_text[letter_iterator]; // Add the next letter
-                        time_counter = 0; // Reset counter
+                        time_counter = 0; // Reset timer
                         letter_iterator++;
                     }
                 }
@@ -44,45 +44,57 @@ namespace Arrested_Waters {
                     letter_iterator = next_string_length;
                 }
             }
-        }
-
-        protected override void Interact() {
-            if (is_talking) {
-                // Start by iterating through main dialogue
+            else if (next_string_length != 0) {
+                done_talking = true;
+            }
+            if (done_talking) {
                 if (main_dialogue.Count > 0) {
-                    next_text = main_dialogue[0];
                     main_dialogue.RemoveAt(0);
                 }
-                // Then iterate and repeat repeating dialogue
                 else {
                     if (repeat_iterator == repeating_dialogue.Count) {
                         repeat_iterator = 0;
                     }
-                    next_text = repeating_dialogue[repeat_iterator];
                     repeat_iterator++;
                 }
-
-                // Set everything to be ready to display
-                dialogue_text.text = "";
-                next_string_length = next_text.Length;
-                letter_iterator = 0;
+                done_talking = false;
+                next_string_length = 0;
             }
         }
 
+        protected override void Interact() {
+            time_counter = 0; // Reset timer
+
+            // Start by iterating through main dialogue
+            if (main_dialogue.Count > 0) {
+                next_text = main_dialogue[0];
+            }
+            // Then iterate and repeat repeating dialogue
+            else {
+                next_text = repeating_dialogue[repeat_iterator];
+            }
+
+            // Set everything to be ready to display
+            dialogue_text.text = "";
+            next_string_length = next_text.Length;
+            letter_iterator = 0;
+        }
+
         protected override void OnTriggerExit2D(Collider2D collision) {
-            if (collision.name == "InteractionCollider" && is_talking) {
+            if (collision.name == "InteractionCollider") {
                 base.OnTriggerExit2D(collision);
                 dialogue_text.text = ""; // Empty dialogue text
                 next_text = ""; // Reset next text
-                is_talking = false;
+                letter_iterator = 0;
+                next_string_length = 0;
             }
         }
 
         protected override void OnTriggerEnter2D(Collider2D collision) {
             base.OnTriggerEnter2D(collision);
-            if (collision.name == "InteractionCollider" && !is_talking) {
-                is_talking = true;
-            }
+            //if (collision.name == "InteractionCollider" && !is_talking) {
+            //    is_talking = true;
+            //}
         }
     }
 }
