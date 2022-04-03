@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public GameObject gun;
     public GameObject axe;
     public PolygonCollider2D interaction_collider;
+    public Texture2D cursorArrow;
+    public Texture2D cursorCrosshair;
 
 
     private void Start()
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         boat = GameManager.instance.boat;
+        Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     void Update()
@@ -56,7 +59,6 @@ public class PlayerController : MonoBehaviour
             if (onBoat)
                 newMovement += new Vector2(boat.GetComponent<Rigidbody2D>().velocity.x, boat.GetComponent<Rigidbody2D>().velocity.y) * Time.fixedDeltaTime;
             rb.MovePosition(newMovement);
-            //AimGun();
         }
         // Set values for the animation.
         //animator.SetFloat("Horizontal", movement.x);
@@ -78,11 +80,12 @@ public class PlayerController : MonoBehaviour
     private void AimGun()
     {
         //gun.SetActive(true);  //Axe Animation is now controlling the gun activation
-        interaction_collider.enabled = false;
+ 
     }
     private void PutGunDown()
     {
         //gun.SetActive(false);
         interaction_collider.enabled = true;
+        
     }
 }
