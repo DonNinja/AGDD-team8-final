@@ -16,8 +16,8 @@ namespace Arrested_Waters {
         public float letter_interval_ms;
 
         float time_counter;
-        int repeat_iterator = 0;
-        public int letter_iterator = 0;
+        public int repeat_iterator = 0;
+        int letter_iterator = 0;
         int next_string_length = 0;
         string next_text = "";
         bool done_talking = false;
@@ -52,10 +52,12 @@ namespace Arrested_Waters {
                     main_dialogue.RemoveAt(0);
                 }
                 else {
-                    if (repeat_iterator == repeating_dialogue.Count) {
+                    if (repeat_iterator == repeating_dialogue.Count - 1) {
                         repeat_iterator = 0;
                     }
-                    repeat_iterator++;
+                    else {
+                        repeat_iterator++;
+                    }
                 }
                 done_talking = false;
                 next_string_length = 0;
