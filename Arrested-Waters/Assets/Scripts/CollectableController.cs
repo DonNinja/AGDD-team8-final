@@ -13,7 +13,7 @@ public class CollectableController : MonoBehaviour {
     float trigger_rad;
 
     // Start is called before the first frame update
-    void Start() {
+    void OnEnable() {
         inv_cont = InventoryController.instance;
         trigger_rad = gameObject.GetComponent<CircleCollider2D>().radius;
     }

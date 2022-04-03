@@ -31,10 +31,12 @@ public class WeaponSwing : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             anim.SetBool("gunmode", true);
+            Cursor.SetCursor(player.cursorCrosshair, Vector2.zero, CursorMode.ForceSoftware);
         }
         if (Input.GetMouseButtonUp(1))
         {
             anim.SetBool("gunmode", false);
+            Cursor.SetCursor(player.cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
         }
 
     }
@@ -52,6 +54,7 @@ public class WeaponSwing : MonoBehaviour
     {
         player.isAiming = true;
         gun.SetActive(true);
+
     }
     public void DeactivateGun()
     {
