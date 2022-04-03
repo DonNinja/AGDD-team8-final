@@ -21,7 +21,6 @@ namespace Arrested_Waters
 
         protected override void Interact()
         {
-            Debug.Log("Interact");
             messageBox.gameObject.SetActive(true);
             messageBox.text = message;
             sprite.enabled = false;
