@@ -37,11 +37,14 @@ namespace Arrested_Waters {
                     EnterBoatFunc();
                 else
                     ExitBoatFunc();
+
+                interaction_text.text = what_do;
             }
         }
 
         public void EnterBoatFunc() {
             Debug.Log("Enter");
+            what_do = "Exit";
             GameManager.instance.mainCamera.target = boat.transform;
             player.boat = boat;
             GameManager.instance.SetBoat(boat);
@@ -54,6 +57,7 @@ namespace Arrested_Waters {
         }
         public void ExitBoatFunc() {
             Debug.Log("Exit");
+            what_do = "Enter";
             GameManager.instance.mainCamera.target = player.transform;
             boat.enabled = false;
             boatCamera.enabled = false;
