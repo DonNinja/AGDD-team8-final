@@ -73,29 +73,8 @@ namespace Arrested_Waters {
         protected override void Interact() {
             if (!requirements.activeSelf) {
                 requirements.SetActive(true);
-                //switch (eb.stage) {
-                //    case 0:
-                //        wood_req = 5;
-                //        metal_req = 2;
-                //        gem_req = 0;
 
-                //        break;
-
-                //    case 1:
-                //        wood_req = 50;
-                //        metal_req = 10;
-                //        gem_req = 0;
-
-                //        break;
-
-                //    default:
-                //        wood_req = 999;
-                //        metal_req = 999;
-                //        gem_req = 999;
-
-                //        break;
-                //}
-                Debug.Log(upgrade_costs.Count);
+                interaction_text.text = "Upgrade";
 
                 wood_req = upgrade_costs[eb.stage].wood_costs;
                 metal_req = upgrade_costs[eb.stage].metal_costs;
@@ -117,23 +96,7 @@ namespace Arrested_Waters {
                     if (craft_sound) {
                         craft_sound.Play();
                     }
-                    // TODO: Upgrade ship
-                    //switch (eb.stage) {
-                    //    case 0:
-                    //        sail.SetActive(true);
 
-                    //        //upgrade_array.game_obj_lists[0];
-
-                    //        break;
-
-                    //    case 1:
-                    //        boat.GetComponent<SpriteRenderer>().sprite = final_boat;
-
-                    //        break;
-
-                    //    default:
-                    //        break;
-                    //}
                     if (upgrade_array.game_obj_lists.Count != 0) {
                         foreach (GameObject obj in upgrade_array.game_obj_lists[eb.stage].game_objects) {
                             obj.SetActive(true);
