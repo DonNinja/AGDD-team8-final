@@ -19,14 +19,15 @@ Repeating dialogue:
 	""
 
 Random Lore Dumps
-	"Hmmmm, some times, I feel like the whole world is spinging around this place"
-	"There is a curse in the air, I dont think anything good will happen if we stay here"
-	"Those people out there, they went mad by the vortex's curse, so be cerfull it wont get to you"
+	"Hmmmm, some times, I feel like the whole world is spinning around this place"
+	"There is a curse in the air, I don't think anything good will happen if we stay here"
+	"Those people out there, they went mad by the vortex's curse, so be careful it wont get to you"
 	"Hmmm, those weapons, they are made... with human bones"
 	"There are lots of people here, they act like they own this place, like that they accept the curse and have now power over it"
-	"Why do people say this place is cursed, really, we are all just lost on some island, any one can go crazy in a situation like this"
-	"Hmmmm, dont wander to far out, or the monster with the spining eyes will get you"
+	"Why do people say this place is cursed, really, we are all just lost on some island, anyone can go crazy in a situation like this"
+	"Hmmmm, don't wander too far out, or the monster with the spinning eyes will get you"
 	"Heh.. Hehee.. Hehehe~ T-There be monsters"
 	"Hmmm, hmmm~ Ahhh, s-sorry, I was doing a prayer to the god of the sea, so they would let us out"
 	"I'm telling you, the see is keeping us from leaving, the water is so trecerus out there, and then there are the sea monsters"
-	"That is right, I hav killed one of those monsters before, no problem, they are not like elder gods or anything"
+	"That is right, I have killed one of those monsters before, no problem, they are not like elder gods or anything"
+
