@@ -71,11 +71,12 @@ namespace Arrested_Waters {
         }
 
         protected override void Interact() {
+            int available_wood = inventoryController.wood_amt;
+            int available_metal = inventoryController.metal_amt;
+            int available_gems = inventoryController.gem_amt;
+            int available_gold = inventoryController.gold_amt;
+
             if (!requirements.activeSelf) {
-                requirements.SetActive(true);
-
-                interaction_text.text = "Upgrade";
-
                 wood_req = upgrade_costs[eb.stage].wood_costs;
                 metal_req = upgrade_costs[eb.stage].metal_costs;
                 gem_req = upgrade_costs[eb.stage].gem_costs;
@@ -85,13 +86,17 @@ namespace Arrested_Waters {
                 metal_txt.text = metal_req.ToString();
                 gem_txt.text = gem_req.ToString();
                 gold_txt.text = gold_req.ToString();
+
+                requirements.SetActive(true);
+
+                if (available_wood >= wood_req && available_metal >= metal_req && available_gems >= gem_req && available_gold >= gold_req) {
+                    interaction_text.text = "Upgrade";
+                }
+                else {
+                    interaction_text.text = "Close";
+                }
             }
             else {
-                int available_wood = inventoryController.wood_amt;
-                int available_metal = inventoryController.metal_amt;
-                int available_gems = inventoryController.gem_amt;
-                int available_gold = inventoryController.gold_amt;
-
                 if (available_wood >= wood_req && available_metal >= metal_req && available_gems >= gem_req && available_gold >= gold_req) {
                     if (craft_sound) {
                         craft_sound.Play();
@@ -111,6 +116,7 @@ namespace Arrested_Waters {
 
                     eb.IncreaseStage();
                 }
+                interaction_text.text = what_do;
 
                 requirements.SetActive(false);
             }
