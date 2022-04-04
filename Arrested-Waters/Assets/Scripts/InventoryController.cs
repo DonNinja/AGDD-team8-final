@@ -18,6 +18,8 @@ public class InventoryController : MonoBehaviour {
     public int gem_amt = 0;
     public int gold_amt = 0;
 
+    bool has_added = false;
+
     private void Awake() {
         if (!instance)
             instance = this;
@@ -26,9 +28,17 @@ public class InventoryController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (Input.GetKey(KeyCode.N) && Input.GetKey(KeyCode.L) && Input.GetKey(KeyCode.G) && !has_added) {
+            IncreaseInventory(CollectableController.Material.Wood, 500);
+            IncreaseInventory(CollectableController.Material.Metal, 500);
+            IncreaseInventory(CollectableController.Material.Gems, 500);
+            IncreaseInventory(CollectableController.Material.Gold, 500);
+            has_added = true;
+        }
     }
 
     public void IncreaseInventory(CollectableController.Material mat_type, int amount=1) {
+        add_text.text = "+" + amount.ToString();
         add_text.alpha = 1.0f;
 
         switch (mat_type) {
