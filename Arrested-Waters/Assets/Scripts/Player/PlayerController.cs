@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public Texture2D cursorArrow;
     public Texture2D cursorCrosshair;
 
+    private bool isDodging;
+    private bool canDodge = true;
 
     private void Start()
     {
@@ -37,32 +39,34 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal");
         // Get y-value of movement. Works with arrow keys and WASD.
         movement.y = Input.GetAxis("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            Dodge();
         
     }
 
     void FixedUpdate()
     {
-        //if (!GameManager.instance.isDead)
-        //{
-        if (!isAiming)
+        if (!isDodging)
         {
-            newMovement = rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime;
-            if (onBoat)
-                newMovement += new Vector2(boat.GetComponent<Rigidbody2D>().velocity.x, boat.GetComponent<Rigidbody2D>().velocity.y) * Time.fixedDeltaTime;
-            rb.MovePosition(newMovement);
-            PutGunDown();
+            if (!isAiming)
+            {
+                newMovement = rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime;
+                if (onBoat)
+                    newMovement += new Vector2(boat.GetComponent<Rigidbody2D>().velocity.x, boat.GetComponent<Rigidbody2D>().velocity.y) * Time.fixedDeltaTime;
+                rb.MovePosition(newMovement);
+                PutGunDown();
+            }
+
+            else
+            {
+                newMovement = rb.position + movement.normalized * moveSpeed / 2 * Time.fixedDeltaTime;
+                if (onBoat)
+                    newMovement += new Vector2(boat.GetComponent<Rigidbody2D>().velocity.x, boat.GetComponent<Rigidbody2D>().velocity.y) * Time.fixedDeltaTime;
+                rb.MovePosition(newMovement);
+            }
         }
 
-        else
-        {
-            newMovement = rb.position + movement.normalized * moveSpeed / 2 * Time.fixedDeltaTime;
-            if (onBoat)
-                newMovement += new Vector2(boat.GetComponent<Rigidbody2D>().velocity.x, boat.GetComponent<Rigidbody2D>().velocity.y) * Time.fixedDeltaTime;
-            rb.MovePosition(newMovement);
-        }
-        // Set values for the animation.
-        //animator.SetFloat("Horizontal", movement.x);
-        //animator.SetFloat("Speed", movement.sqrMagnitude);
 
         //Rotate toward mouse
         Vector2 positionOnScreen = transform.position;
@@ -70,6 +74,27 @@ public class PlayerController : MonoBehaviour
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         // }
+    }
+
+    private void Dodge()
+    {
+        if (canDodge)
+        {
+            canDodge = false;
+            rb.AddForce(movement.normalized * 10, ForceMode2D.Impulse);
+            isDodging = true;
+            StartCoroutine(dodgeCooldownCorotine());
+        }
+    }
+
+    IEnumerator dodgeCooldownCorotine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        isDodging = false;
+        rb.velocity = Vector2.zero;
+        yield return new WaitForSeconds(0.2f);
+        canDodge = true;
+        
     }
 
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
