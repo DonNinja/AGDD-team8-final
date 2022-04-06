@@ -10,7 +10,7 @@ namespace Arrested_Waters {
         public string what_do;
         [SerializeField] protected GameObject interaction_box;
         [SerializeField] protected TextMeshProUGUI interaction_text;
-        private bool is_interacting;
+        protected bool is_interacting;
 
         // Update is called once per frame
         protected virtual void Update() {
