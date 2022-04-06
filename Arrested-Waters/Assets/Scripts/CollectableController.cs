@@ -6,6 +6,7 @@ public class CollectableController : MonoBehaviour {
     InventoryController inv_cont;
     public enum Material { Wood, Metal, Gems, Gold };
     public string player_name;
+    public GameObject pickUpParticle;
 
     GameObject particles;
 
@@ -68,6 +69,7 @@ public class CollectableController : MonoBehaviour {
             inv_cont.IncreaseInventory(mat_type);
             Destroy(gameObject);
             Destroy(this);
+            Instantiate(pickUpParticle, transform.position, transform.rotation);
         }
     }
 }

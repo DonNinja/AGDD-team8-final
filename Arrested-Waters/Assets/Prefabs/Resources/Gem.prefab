@@ -4939,6 +4939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_name: Player
+  pickUpParticle: {fileID: 7034213259905020735, guid: f4f7394777cd43b488c1114ae502f14d, type: 3}
   wall:
     serializedVersion: 2
     m_Bits: 4096
