@@ -14,6 +14,7 @@ namespace Arrested_Waters {
         [SerializeField] TextMeshProUGUI dialogue_text;
 
         public float letter_interval_ms;
+        GameObject player_obj;
 
         float time_counter;
         public int repeat_iterator = 0;
@@ -24,6 +25,7 @@ namespace Arrested_Waters {
 
         protected void Start() {
             dialogue_text.text = "";
+            player_obj = GameObject.Find("Player");
         }
 
         private void FixedUpdate() {
@@ -97,6 +99,17 @@ namespace Arrested_Waters {
             //if (collision.name == "InteractionCollider" && !is_talking) {
             //    is_talking = true;
             //}
+        }
+
+        private void OnTriggerStay2D(Collider2D collision) {
+            if (collision.name == "InteractionCollider" && is_interacting) {
+                Vector3 _direction = (player_obj.transform.position - transform.position).normalized;
+                _direction.z = 0; // Reset z depth
+
+                Quaternion _rotation = Quaternion.FromToRotation(Vector3.up, _direction);
+
+                transform.rotation = Quaternion.Slerp(transform.rotation, _rotation, Time.deltaTime * 5); // Rotate towards player slowly
+            }
         }
     }
 }
