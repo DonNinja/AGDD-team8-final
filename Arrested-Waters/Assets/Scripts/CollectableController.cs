@@ -7,7 +7,7 @@ public class CollectableController : MonoBehaviour {
     public enum Material { Wood, Metal, Gems, Gold };
     public string player_name;
     public GameObject pickUpParticle;
-
+    public LayerMask IgnoreMask;
     GameObject particles;
 
     [SerializeField] LayerMask wall;
@@ -30,7 +30,7 @@ public class CollectableController : MonoBehaviour {
         float dist = Vector3.Distance(ray_start, ray_end);
 
         // Check a raycast between the 2 places
-        RaycastHit2D raycast_hit = Physics2D.Raycast(ray_start, direction, dist, wall.value);
+        RaycastHit2D raycast_hit = Physics2D.Raycast(ray_start, direction, dist, wall.value, ~IgnoreMask);
 
         // Check if raycast hits something
         bool did_hit = raycast_hit.collider == null;
