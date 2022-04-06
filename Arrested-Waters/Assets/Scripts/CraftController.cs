@@ -4,12 +4,6 @@ using UnityEngine;
 using TMPro;
 
 namespace Arrested_Waters {
-    //[System.Serializable]
-    //public class Upgrade {
-    //    public GameObject g_obj;
-    //    public bool activate;
-    //}
-
     [System.Serializable]
     public class GameObjList {
         public List<GameObject> game_objects;

@@ -35,6 +35,11 @@ public class InventoryController : MonoBehaviour {
             IncreaseInventory(CollectableController.Material.Gold, 500);
             has_added = true;
         }
+
+        wood_text.text = wood_amt.ToString();
+        metal_text.text = metal_amt.ToString();
+        gem_text.text = gem_amt.ToString();
+        gold_text.text = gold_amt.ToString();
     }
 
     public void IncreaseInventory(CollectableController.Material mat_type, int amount=1) {
@@ -45,22 +50,18 @@ public class InventoryController : MonoBehaviour {
             case CollectableController.Material.Wood:
                 wood_amt += amount;
                 add_text.transform.position = wood_text.transform.position;
-                wood_text.text = wood_amt.ToString();
                 break;
             case CollectableController.Material.Metal:
                 metal_amt += amount;
                 add_text.transform.position = metal_text.transform.position;
-                metal_text.text = metal_amt.ToString();
                 break;
             case CollectableController.Material.Gems:
                 gem_amt += amount;
                 add_text.transform.position = gem_text.transform.position;
-                gem_text.text = gem_amt.ToString();
                 break;
             case CollectableController.Material.Gold:
                 gold_amt += amount;
                 add_text.transform.position = gold_text.transform.position;
-                gold_text.text = gold_amt.ToString();
                 break;
             default:
                 break;
