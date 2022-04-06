@@ -14,12 +14,15 @@ public class CollectableController : MonoBehaviour {
     public Material mat_type;
     bool is_picked_up = false;
     float trigger_rad;
+    bool isClose;
+    GameObject player;
 
     // Start is called before the first frame update
     void OnEnable() {
         inv_cont = InventoryController.instance;
         trigger_rad = gameObject.GetComponent<CircleCollider2D>().radius;
         particles = transform.GetChild(0).gameObject;
+        player = GameManager.instance.player.gameObject;
     }
 
     private bool HasDirectLine(Transform from, Transform to) {
@@ -42,18 +45,13 @@ public class CollectableController : MonoBehaviour {
         return did_hit;
     }
 
-    private void OnTriggerStay2D(Collider2D collision) {
-        GameObject other = collision.gameObject;
+    private void FixedUpdate()
+    {
+        if(isClose)
+        {
+            Vector3 dir_vec = (player.transform.position - gameObject.transform.position).normalized;
 
-        // Check if:
-        //      1. the player is within range,
-        //      2. it hasn't been picked up (to prevent it getting picked up twice)
-        //      3. that the item has a direct line to the player
-        if (other.name == player_name && !is_picked_up && HasDirectLine(gameObject.transform, other.transform)) {
-            // Float toward the player
-            Vector3 dir_vec = (other.transform.position - gameObject.transform.position).normalized;
-
-            float dist = Vector2.Distance(other.transform.position, gameObject.transform.position);
+            float dist = Vector2.Distance(player.transform.position, gameObject.transform.position);
 
             // Move towards player at speed determined by distance
             gameObject.transform.position += dir_vec * (trigger_rad - dist) * Time.deltaTime;
@@ -61,12 +59,27 @@ public class CollectableController : MonoBehaviour {
             //enable the paricles effect
             particles.SetActive(true);
         }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        GameObject other = collision.gameObject;
+
+        // Check if:
+        //      1. the player is within range,
+        //      2. it hasn't been picked up (to prevent it getting picked up twice)
+        //      3. that the item has a direct line to the player
+        if (other.gameObject.name == player_name && !is_picked_up && HasDirectLine(gameObject.transform, other.transform)) {
+            isClose = true;
+            Debug.Log("Yes");
+        }
     }
     private void OnTriggerExit2D(Collider2D collision) {
         GameObject other = collision.gameObject;
-        if (other.name == player_name && !is_picked_up) {
+        if (other.gameObject == player) {
             //disable the paricles effect
             particles.SetActive(false);
+            isClose = false;
         }
     }
 
