@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
     public void Awake()
     {
         healthSlider = gameObject.GetComponent<Slider>();
-        fill = gameObject.transform.GetComponentInChildren<Image>();
+        fill = gameObject.transform.GetChild(1).GetComponent<Image>();
     }
 
     public void SetMaxHealth(int health)

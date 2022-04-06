@@ -7,6 +7,8 @@ public class CollectableController : MonoBehaviour {
     public enum Material { Wood, Metal, Gems, Gold };
     public string player_name;
 
+    GameObject particles;
+
     [SerializeField] LayerMask wall;
     public Material mat_type;
     bool is_picked_up = false;
@@ -16,6 +18,7 @@ public class CollectableController : MonoBehaviour {
     void OnEnable() {
         inv_cont = InventoryController.instance;
         trigger_rad = gameObject.GetComponent<CircleCollider2D>().radius;
+        particles = transform.GetChild(0).gameObject;
     }
 
     private bool HasDirectLine(Transform from, Transform to) {
@@ -53,6 +56,9 @@ public class CollectableController : MonoBehaviour {
 
             // Move towards player at speed determined by distance
             gameObject.transform.position += dir_vec * (trigger_rad - dist) * Time.deltaTime;
+
+            //enable the paricles effect
+            particles.SetActive(true);
         }
     }
 
