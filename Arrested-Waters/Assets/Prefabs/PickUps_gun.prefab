@@ -102,6 +102,7 @@ MonoBehaviour:
   message: Hold Left mouse to Aim
   messageBox: {fileID: 0}
   timer: 3
+  enablesOnPickUp: {fileID: 0}
 --- !u!58 &6207023424048435931
 CircleCollider2D:
   m_ObjectHideFlags: 0

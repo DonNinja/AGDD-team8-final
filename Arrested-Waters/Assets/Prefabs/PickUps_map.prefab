@@ -102,6 +102,7 @@ MonoBehaviour:
   message: Press M to see map
   messageBox: {fileID: 0}
   timer: 3
+  enablesOnPickUp: {fileID: 0}
 --- !u!58 &2832826940406691999
 CircleCollider2D:
   m_ObjectHideFlags: 0
