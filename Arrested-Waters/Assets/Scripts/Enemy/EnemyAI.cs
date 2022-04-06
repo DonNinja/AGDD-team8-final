@@ -11,13 +11,14 @@ public class EnemyAI : MonoBehaviour
     public GameObject player;
     private Rigidbody2D rigi;
     public GameObject attack;
-    private float ImuneTime;
     private SpriteRenderer sprite;
     private Animator anim;
     public AudioClip monsterSound;
     public AudioSource audioSource;
     public float attackWalkSpeed;
     public GameObject drop;
+
+    bool immune = false;
 
     public bool immuneToStagger = false;
     public float movmentSpeed = 6;
@@ -61,20 +62,21 @@ public class EnemyAI : MonoBehaviour
         path.destination = transform.position;
     }
 
-    public void Update()
+    private void FixedUpdate()
     {
+        if (aggro)
+        {
+            path.destination = player.transform.position;
+            interestTimer += Time.deltaTime;
+            if (interestTimer >= interestTime)
+                LosePlayer();
+        }
+
         path.maxSpeed = walkSpeed;
-        //anim.SetFloat("Speed", path.velocity.magnitude);
 
-
-        ImuneTime -= Time.deltaTime;
         if (rigi.velocity.magnitude <= 0.1f)
         {
             path.canMove = true;
-        }
-        else
-        {
-            //anim.SetFloat("Speed", 0);
         }
 
         if (attackTimer < attackSpeed)
@@ -85,25 +87,14 @@ public class EnemyAI : MonoBehaviour
         {
             Attack();
         }
-    }
 
-    private void FixedUpdate()
-    {
-        if (aggro)
-        {
-            path.destination = player.transform.position;
-            interestTimer += Time.deltaTime;
-            if (interestTimer >= interestTime)
-                LosePlayer();
-        }
     }
 
     public void TakeDamage(float power)
     {
         SpottPlayer(player);
-        if (ImuneTime <= 0)
+        if (!immune)
         {
-            ImuneTime = 0.2f;
             health -= power;
             if (health <= 0)
             {
@@ -137,5 +128,11 @@ public class EnemyAI : MonoBehaviour
     {
         Destroy(gameObject);
         Instantiate(drop, transform.position, transform.rotation);
+    }
+
+    IEnumerator imuneToDamage()
+    {
+        yield return new WaitForSeconds(0.2f);
+        immune = false;
     }
 }

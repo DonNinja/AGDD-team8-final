@@ -30,7 +30,6 @@ public class EnemySight : MonoBehaviour
                 ai.SpottPlayer(watchingTarget);
             }
             RaycastHit2D hit = Physics2D.Raycast(transform.position, watchingTarget.transform.position - transform.position, 1000f, ~IgnoreMask);
-            Debug.DrawRay(transform.position, watchingTarget.transform.position - transform.position, Color.green);
             if (hit)
             {
                 angle = Vector2.Angle((watchingTarget.transform.position - transform.position), (visionDirection.position - transform.position));
@@ -44,7 +43,6 @@ public class EnemySight : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.gameObject == GameManager.instance.player.gameObject)
         {
             

@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 692932862}
   - component: {fileID: 692932863}
   - component: {fileID: 17314289692566872}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: HitBox
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1736585408
 Transform:
   m_ObjectHideFlags: 0
@@ -164,14 +164,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736585407}
-  m_LocalRotation: {x: -0, y: -0, z: 0.8523745, w: 0.52293193}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
   m_LocalPosition: {x: -0.522, y: 0.848, z: 0}
   m_LocalScale: {x: 0.83784616, y: 1.208432, z: 0.92071}
   m_Children:
   - {fileID: 692932862}
   m_Father: {fileID: 7414671063099183790}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 116.942}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 540}
 --- !u!212 &1736585412
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -838496533
   m_SortingLayer: -5
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 4e166474beddfe243a41eb2c1dffd73a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -396,7 +396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246198122214019228}
   - component: {fileID: 1109304067126158368}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: InteractionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -519,7 +519,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -838496533
   m_SortingLayer: -5
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 4e166474beddfe243a41eb2c1dffd73a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -543,12 +543,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceaca939d8869ab438a4c9395cdf1ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
+  cooldown: 0.2
   currentAmmo: 2
   maxAmmo: 2
   shootFX: {fileID: 3208756229646439691, guid: d9062f2c0e300a2458413d588483d319, type: 3}
   gunPoint: {fileID: 606074633}
-  ammoUIslot: []
+  ammoUIslot:
+  - {fileID: 0}
+  - {fileID: 0}
   canShoot: 1
   weaponShotAudioSource: {fileID: 7904827165163840283}
 --- !u!1 &4717693692512937917
@@ -779,8 +781,8 @@ MonoBehaviour:
   gun: {fileID: 3771867630119062228}
   axe: {fileID: 1736585407}
   interaction_collider: {fileID: 1109304067126158368}
-  cursorArrow: {fileID: 0}
-  cursorCrosshair: {fileID: 0}
+  cursorArrow: {fileID: 2800000, guid: 1e65b228aa3be0c4e83a6750a5e7674f, type: 3}
+  cursorCrosshair: {fileID: 2800000, guid: b06b3f26ea25e994b94e46449c9fbf29, type: 3}
 --- !u!114 &1239473082219465290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,8 +952,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7414671064725437097}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071066, w: 0.707107}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.72586, y: 0.72586, z: 0.72586}
   m_Children: []
   m_Father: {fileID: 7414671063099183790}
