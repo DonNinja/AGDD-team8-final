@@ -62,6 +62,13 @@ public class CollectableController : MonoBehaviour {
             particles.SetActive(true);
         }
     }
+    private void OnTriggerExit2D(Collider2D collision) {
+        GameObject other = collision.gameObject;
+        if (other.name == player_name && !is_picked_up) {
+            //disable the paricles effect
+            particles.SetActive(false);
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.name == player_name && !is_picked_up) {
