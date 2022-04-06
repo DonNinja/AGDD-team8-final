@@ -64,6 +64,15 @@ namespace Arrested_Waters {
                 done_talking = false;
                 next_string_length = 0;
             }
+
+            if (is_interacting) {
+                Vector3 _direction = (player_obj.transform.position - transform.position).normalized;
+                _direction.z = 0; // Reset z depth
+
+                Quaternion _rotation = Quaternion.FromToRotation(Vector3.up, _direction);
+
+                transform.rotation = Quaternion.Slerp(transform.rotation, _rotation, Time.deltaTime * 5); // Rotate towards player slowly
+            }
         }
 
         protected override void Interact() {
@@ -101,15 +110,9 @@ namespace Arrested_Waters {
             //}
         }
 
-        private void OnTriggerStay2D(Collider2D collision) {
-            if (collision.name == "InteractionCollider" && is_interacting) {
-                Vector3 _direction = (player_obj.transform.position - transform.position).normalized;
-                _direction.z = 0; // Reset z depth
-
-                Quaternion _rotation = Quaternion.FromToRotation(Vector3.up, _direction);
-
-                transform.rotation = Quaternion.Slerp(transform.rotation, _rotation, Time.deltaTime * 5); // Rotate towards player slowly
-            }
-        }
+        //private void OnTriggerStay2D(Collider2D collision) {
+        //    if (collision.name == "InteractionCollider" && is_interacting) {
+        //    }
+        //}
     }
 }

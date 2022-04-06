@@ -787,6 +787,10 @@ PrefabInstance:
       propertyPath: debug
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1652902380845778516, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: waves_breaking_sfx
+      value: 
+      objectReference: {fileID: 2950421301529149067}
     - target: {fileID: 1652902380845778517, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 10.35
@@ -831,6 +835,86 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[0].gem_costs
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[1].gem_costs
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[2].gem_costs
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[0].gold_costs
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[0].wood_costs
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[1].gold_costs
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[1].wood_costs
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[2].gold_costs
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[2].wood_costs
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_array.game_obj_lists.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[0].metal_costs
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[1].metal_costs
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_costs.Array.data[2].metal_costs
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_array.game_obj_lists.Array.data[0].game_objects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_array.game_obj_lists.Array.data[1].game_objects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_array.game_obj_lists.Array.data[0].game_objects.Array.data[0]
+      value: 
+      objectReference: {fileID: 5845377555033107426}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_array.game_obj_lists.Array.data[1].game_objects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1644857345199354370}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_array.game_obj_lists.Array.data[1].game_objects.Array.data[1]
+      value: 
+      objectReference: {fileID: 5149038648603425607}
+    - target: {fileID: 8741463005253416370, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+      propertyPath: upgrade_array.game_obj_lists.Array.data[1].game_objects.Array.data[2]
+      value: 
+      objectReference: {fileID: 4059631946013620602}
     m_RemovedComponents:
     - {fileID: 7899616447615977228, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
     - {fileID: 1652902380845778517, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
@@ -843,6 +927,16 @@ GameObject:
 --- !u!4 &5845377556846263846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1652902380845778515, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+  m_PrefabInstance: {fileID: 5183284866936567925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2950421301529149067 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8006479388282095358, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
+  m_PrefabInstance: {fileID: 5183284866936567925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5845377555033107426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1652902381045896087, guid: e821a04b6ff5a5544945f209d6123f71, type: 3}
   m_PrefabInstance: {fileID: 5183284866936567925}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4512976632741383620 stripped
